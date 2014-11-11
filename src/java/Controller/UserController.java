@@ -8,6 +8,7 @@ package Controller;
 import DAO.OtherDAO;
 import DAO.UserDAO;
 import Entity.User;
+import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
@@ -22,12 +23,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import org.dom4j.io.SAXReader;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 
 /**
  *
@@ -389,12 +390,13 @@ public class UserController extends HttpServlet {
             SAXReader reader = new SAXReader();
             Document document;
             boolean found = false;
+            String webAppPath = getServletContext().getRealPath("/");
             try {
-                document = reader.read("xml/Customers.xml");
+                document = reader.read(webAppPath + "/xml/Customers.xml");
                 Element root = document.getRootElement();
                 for (Iterator i = root.elementIterator("Customer"); i.hasNext();) {
                     Element elt = (Element) i.next();
-                    String username = elt.element("Username").getText();
+                    String username = elt.element("Name").getText();
                     String password = elt.element("Password").getText();
                     if (username.equalsIgnoreCase(username1) && password.equalsIgnoreCase(password1)) {
                         String role = elt.element("Role").getText();
@@ -414,6 +416,7 @@ public class UserController extends HttpServlet {
                     }
                 }
             } catch (DocumentException ex) {
+                System.out.println("Login Failed!");
                 Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             }
 
