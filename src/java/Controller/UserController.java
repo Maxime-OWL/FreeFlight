@@ -405,13 +405,13 @@ public class UserController extends HttpServlet {
                         session.setAttribute("role", role);
                         session.setAttribute("username", username);
                         session.setAttribute("userid", userid);
-                        rd = request.getRequestDispatcher("cp.jsp?current_page=dashboard&errorCode=1");
+                        rd = request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
                         found = true;
-                        break;
+                        break; 
                     }
                     if (!found) {
-                        rd = request.getRequestDispatcher("login.jsp?errorCode=0");
+                        rd = request.getRequestDispatcher("login.jsp?errorCode=1");
                         rd.forward(request, response);
                     }
                 }

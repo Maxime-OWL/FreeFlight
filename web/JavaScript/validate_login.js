@@ -14,7 +14,7 @@ function validateLogin() {
     } else if (username.length < 3 || username.length > 20) {
         showError(9);
         return false;
-    } else if (password.length < 6 || password.length > 20) {
+    } else if ( false && password.length < 1 || password.length > 20) {
         showError(10);
         return false;
     }else if(!regcharacter.test(username)){
