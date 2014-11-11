@@ -15,34 +15,18 @@
         <script language="JavaScript" type="text/javascript" src="JavaScript/permissions.js"></script>
     </head>
     <body>
-        <%@include file="perm_customer.jsp" %>
-        <%            if (request.getAttribute("balance") == null) {
-                        response.sendRedirect("UserController?service=dashboard");
-            } else {
-                String balance = (String) request.getAttribute("balance");
-                
-        %>
-        
         <jsp:include page="top.jsp">
-            <jsp:param name="balance" value="<%=balance%>" />
+            <jsp:param name="balance" value="" />
         </jsp:include>
 
-        <div class="header2">  
-            <%                String errorCode = request.getParameter("errorCode");
-            %>
-            <%if (errorCode != null && errorCode.equals("1")) {%>
+        <div class="header2">
             <ul id="message" class="success_msg">
                 <li><p>Logged in successfully!</p></li>
             </ul>
-            <br>  
-            <% }%>
-            <jsp:include page="cp_cols.jsp" />    
-            <jsp:include page="cp_home.jsp">
-                <jsp:param name="balance" value="<%=balance%>" />
-            </jsp:include>
+            <br>
+            <jsp:include page="cp_cols.jsp" />
         </div>
-        <jsp:include page="footer.jsp" />
-        <% }%>
+        <jsp:include page="footer.jsp" />   
     </body> 
 
 </html>
