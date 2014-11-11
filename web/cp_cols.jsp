@@ -40,11 +40,11 @@
                             }
                             if (rank == 1) {
                         %>
-                    <li class="" id=""><a href="#" title="Add New Flight">View Tickets</a></li>
-                    <li class="" id=""><a href="#" title="Add Flight">Add Flight</a></li>
-                    <li class="" id=""><a href="#" title="Add Location">Add Location</a></li>
+                    <li class="" id=""><a href="#" title="View Tickets">View Tickets</a></li>
+                    <li class="" id=""><a href="cp_add_flight.jsp" title="Add Flight">Add Flight</a></li>
+                    <li class="" id=""><a href="cp_add_location.jsp" title="Add Location">Add Location</a></li>
                     <li class="" id=""><a href="#" title="Edit Location">Edit Location</a></li>
-                    <li class="" id=""><a href="#" title="Add Plane">Add Plane</a></li>
+                    <li class="" id=""><a href="cp_add_plane.jsp" title="Add Plane">Add Plane</a></li>
                     <li class="" id=""><a href="#" title="Edit Plane">Edit Plane</a></li>
                     <li class="" id=""><a href="#" title="Delay Flight">Delay Flight</a></li>
                         <%
