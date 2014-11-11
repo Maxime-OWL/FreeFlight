@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?><Planes>
+	<Plane>
+		<PlaneId>1</PlaneId>
+		<Model>Boeing 747</Model>
+		<Capacity>112</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>2</PlaneId>
+		<Model>Boeing 777</Model>
+		<Capacity>132</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>3</PlaneId>
+		<Model>Boeing 737</Model>
+		<Capacity>105</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>4</PlaneId>
+		<Model>Boeing 767</Model>
+		<Capacity>130</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>5</PlaneId>
+		<Model>Boeing Super Hornet</Model>
+		<Capacity>145</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>6</PlaneId>
+		<Model>Boeing 702</Model>
+		<Capacity>112</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>7</PlaneId>
+		<Model>Boeing Chinook</Model>
+		<Capacity>140</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>8</PlaneId>
+		<Model>Airbus A380</Model>
+		<Capacity>101</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>9</PlaneId>
+		<Model>Airbus A318</Model>
+		<Capacity>124</Capacity>
+	</Plane>
+	<Plane>
+		<PlaneId>10</PlaneId>
+		<Model>Airbus A319</Model>
+		<Capacity>135</Capacity>
+	</Plane>
+</Planes>
