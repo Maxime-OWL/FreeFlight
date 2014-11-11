@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,7 +19,7 @@
     <body>
         <jsp:include page="top.jsp" />
         <div class="header2">
-            <jsp:include page="cp_cols_1.jsp" />
+            <jsp:include page="cp_cols.jsp" />
             <div class="my_message_right" id="edit_profile_page">
                 <div class="message_common_border">
                     <h1 style="font-weight:bold;">Add New Flight</h1>
@@ -39,7 +41,13 @@
                                                     <div class="user_name_common" style="width:400px;">
                                                         <div class="user_name_common" style="width:400px;">
                                                             <div class="text_feeld">
-                                                                <select name="categoryId" id="categoryId">
+                                                                <c:import var="locations" url="xml/Locations.xml"/>
+                                                                <x:parse xml="${locations}" var="output"/>
+                                                                <select name="origin">
+                                                                    <option value="0">Select a Location</option>
+                                                                    <x:forEach select="$output/Locations/Location" var="location">
+                                                                        <option value="<x:out select="$location/LocationId" />"><x:out select="$location/Name" /></option>
+                                                                    </x:forEach>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -60,7 +68,12 @@
                                                     <div class="user_name_common" style="width:400px;">
                                                         <div class="user_name_common" style="width:400px;">
                                                             <div class="text_feeld">
-                                                                <select name="categoryId" id="categoryId">
+                                                                <x:parse xml="${locations}" var="output"/>
+                                                                <select name="destination">
+                                                                    <option value="0">Select a Location</option>
+                                                                    <x:forEach select="$output/Locations/Location" var="location">
+                                                                        <option value="<x:out select="$location/LocationId" />"><x:out select="$location/Name" /></option>
+                                                                    </x:forEach>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -101,7 +114,14 @@
                                                     <div class="user_name_common" style="width:400px;">
                                                         <div class="user_name_common" style="width:400px;">
                                                             <div class="text_feeld">
-                                                                <h2><input type="text" name="plane" id="title" class="textbox" maxlength="100" value=""></h2>
+                                                                <c:import var="planes" url="xml/Planes.xml"/>
+                                                                <x:parse xml="${planes}" var="output"/>
+                                                                <select name="plane">
+                                                                    <option value="0">Select a Plane</option>
+                                                                    <x:forEach select="$output/Planes/Plane" var="plane">
+                                                                        <option value="<x:out select="$plane/PlaneId" />"><x:out select="$plane/Model" /></option>
+                                                                    </x:forEach>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div id="errorTitle" style="width:500px;padding-top:4px"><br>
