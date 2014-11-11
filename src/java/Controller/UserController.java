@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -29,6 +30,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
+import org.dom4j.tree.DefaultElement;
 
 /**
  *
@@ -61,7 +63,21 @@ public class UserController extends HttpServlet {
         final String reset_password = "reset_password.jsp";
         final String user_add = "cp_user_add.jsp?current_page=user_manager";
         RequestDispatcher rd;
-        if (service.equalsIgnoreCase("user_manager")) {
+        if (service.equalsIgnoreCase("add_new_location")) {
+            String location = request.getParameter("location");
+            try {
+                SAXReader reader = new SAXReader();
+                String webAppPath = getServletContext().getRealPath("/");
+                Document document = reader.read(webAppPath + "/xml/Locations.xml");
+                Element rootElement = document.getRootElement();
+                Node node = document.selectSingleNode("/Locations/Location[not(../Location/LocationId > Id)]");
+                String id = node.valueOf("LocationId");
+                System.out.println(id);
+            } catch (DocumentException ex) {
+                System.out.println("Add New Location Failed!");
+                Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+            } 
+        }else if (service.equalsIgnoreCase("user_manager")) {
             rd = request.getRequestDispatcher(userManager);
             rd.forward(request, response);
             return;
@@ -408,7 +424,7 @@ public class UserController extends HttpServlet {
                         rd = request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
                         found = true;
-                        break; 
+                        break;
                     }
                     if (!found) {
                         rd = request.getRequestDispatcher("login.jsp?errorCode=1");
