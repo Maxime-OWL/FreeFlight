@@ -59,13 +59,10 @@ public class FlightController extends HttpServlet {
         final String auction_detail_loading = "auction_detail_ajax.jsp";
         String webAppPath = getServletContext().getRealPath("/");
         if (service.equalsIgnoreCase("index")) {
-            ArrayList<Flight> flights = dao.fetchFlights(webAppPath);
+            ArrayList<Flight> flights =  dao.fetchFlights(webAppPath);
             request.setAttribute("flights", flights);
-            
             rd = request.getRequestDispatcher("index.jsp");
-            rd.forward(request, response);
-            return;
-        
+            rd.forward(request, response);        
         } else {
             response.sendRedirect("notification.jsp?errorCode=2");
         }

@@ -4,6 +4,7 @@
     Author     : MrDuc
 --%>
 
+<%@page import="Entity.Flight"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,16 +16,21 @@
         <script language="JavaScript" type="text/javascript" src="JavaScript/permissions.js"></script>
     </head>
     <body>
+        <%
+            ArrayList<Flight> flights = (ArrayList<Flight>) request.getAttribute("flights");
+
+            if (flights == null) {
+                response.sendRedirect("FlightController?service=index");
+            } else {
+
+        %>
         <%@ include file="top.jsp" %> 
         <div class="header2">  
-            <div id="top_message">
-                <!--<ul id="message" class="success_msg">
-                    <li>Add to watchlist fail.</li>
-                </ul>-->
-            </div>
             <%@ include file="home.jsp" %>
         </div>
         <jsp:include page="footer.jsp" />
+        <%            }
+        %>
      
     </body> 
 

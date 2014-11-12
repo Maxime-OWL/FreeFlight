@@ -12,11 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
+        <!--
         <div class="footer_down">
             <div class="footer_down_inner">
                 <p class="copyright">Copyright © 2014 | Free Flight System | All rights reserved .</p>
             </div>
         </div>
+        -->
     </body>
 </html>

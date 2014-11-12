@@ -12,7 +12,6 @@ package DAO;
 import Entity.Flight;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -31,6 +30,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
+import java.util.ArrayList;
 
 public class FlightDAO {
 
@@ -43,10 +43,9 @@ public class FlightDAO {
     }
     
     public ArrayList<Flight> fetchFlights(String webAppPath) {
-        ArrayList<Flight> flights = new ArrayList<Flight>();
+        ArrayList<Flight> arr = new ArrayList<Flight>();
         SAXReader reader = new SAXReader();
         Document document;
-        boolean found = false;
         try {
             document = reader.read(webAppPath + "/xml/Flights.xml");
             Element root = document.getRootElement();
@@ -54,17 +53,20 @@ public class FlightDAO {
                 Element elt = (Element) i.next();
                 Flight flight = new Flight();
                 flight.setFlightId(Integer.parseInt(elt.element("FlightId").getText()));
+                flight.setOrigin(Integer.parseInt(elt.element("Origin").getText()));
                 flight.setDestination(Integer.parseInt(elt.element("Destination").getText()));
                 flight.setFee(elt.element("Fee").getText());
                 flight.setPlane(Integer.parseInt(elt.element("Plane").getText()));
                 flight.setDepartureDate(elt.element("DepartureTime").getText());
                 flight.setArrivalDate(elt.element("ArrivalTime").getText());
-                flights.add(flight);
+                System.out.println(flight.getArrivalDate());
+                arr.add(flight);
             }
         } catch (DocumentException ex) {
             System.out.println("fetchFlights failed!");
         }
-        return flights;
+        System.out.println("Done!");
+        return arr;
     }
 
     public String formatDate(String datetime) throws ParseException {

@@ -129,3 +129,29 @@ body {
     text-align: left;
     font-weight: bold;
 }
+
+#logtable
+{
+    /*font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    
+    font-size: 12px;
+    margin: 45px;
+    */
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid gray;
+
+}
+#logtable th
+{
+    padding: 12px 17px 12px 17px;
+    font-weight: normal;
+    font-size: 14px;
+    color: gray;
+    border-bottom: 1px dashed gray;
+}
+#logtable td
+{
+    padding: 5px 5px 5px 5px;
+    color: black;
+}
