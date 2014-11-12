@@ -5,17 +5,15 @@
  */
 package Controller;
 
-import DAO.OtherDAO;
+import DAO.FlightDAO;
 import DAO.UserDAO;
 import Entity.User;
-import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -24,25 +22,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
-import org.dom4j.tree.DefaultElement;
 
 /**
  *
  * @author Duc
  */
-public class UserController extends HttpServlet {
+public class Controller extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, NoSuchAlgorithmException {
         response.setContentType("text/html;charset=UTF-8");
         UserDAO dao = new UserDAO();
-        OtherDAO otherDAO = new OtherDAO();
+        FlightDAO otherDAO = new FlightDAO();
         ResultSet rs = null;
         String service = request.getParameter("service");
         if (service == null) {
@@ -75,7 +71,7 @@ public class UserController extends HttpServlet {
                 System.out.println(id);
             } catch (DocumentException ex) {
                 System.out.println("Add New Location Failed!");
-                Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             } 
         }else if (service.equalsIgnoreCase("user_manager")) {
             rd = request.getRequestDispatcher(userManager);
@@ -120,29 +116,6 @@ public class UserController extends HttpServlet {
             }
             rd.forward(request, response);
             return;
-        } else if (service.equalsIgnoreCase("change_password")) {
-            int userId = Integer.parseInt(request.getParameter("userid"));
-            String oldPass = request.getParameter("old_password");
-            String newPass = request.getParameter("new_password");
-            String confirmPass = request.getParameter("confirm_password");
-            if (oldPass == null || newPass == null || confirmPass == null || oldPass.isEmpty() || newPass.isEmpty() || confirmPass.isEmpty() || newPass.length() < 6 || confirmPass.length() < 6) {
-                rd = request.getRequestDispatcher(change_pass + "&errorCode=1");
-                rd.forward(request, response);
-                return;
-            } else if (!newPass.equals(confirmPass)) {
-                rd = request.getRequestDispatcher(change_pass + "&errorCode=2");
-                rd.forward(request, response);
-                return;
-            } else if (oldPass.equals(newPass)) {
-                rd = request.getRequestDispatcher(change_pass + "&errorCode=3");
-                rd.forward(request, response);
-                return;
-            } else {
-                String errorCode = dao.changePassword(oldPass, newPass, userId);
-                rd = request.getRequestDispatcher(change_pass + "&errorCode=" + errorCode);
-                rd.forward(request, response);
-                return;
-            }
 
         } else if (service.equalsIgnoreCase("listall")) {
             ArrayList<User> arr = dao.list();
@@ -189,63 +162,6 @@ public class UserController extends HttpServlet {
             } else {
                 response.sendRedirect("notification.jsp?errorCode=3");
             }
-        } else if (service.equalsIgnoreCase("add_user")) {
-            String username = request.getParameter("username");
-            String fullname = request.getParameter("fullname");
-            String phonenumber = request.getParameter("phonenumber");
-            String email = request.getParameter("email");
-            String address = request.getParameter("address");
-            int status = Integer.parseInt(request.getParameter("cb2"));
-            int role = Integer.parseInt(request.getParameter("cb1"));
-            String url = user_add + "?username=" + username + "&fullname=" + fullname + "&phonenumber=" + phonenumber + "&email=" + email + "&address=" + address + "&cb1=" + role + "&cb2=" + status + "&errorCode=";
-            if (username == null || username.isEmpty() || username.length() < 3 || username.length() > 20) {
-                url = url + "1";
-                rd = request.getRequestDispatcher(url);
-                rd.forward(request, response);
-                return;
-            } else if (email == null || email.isEmpty() || email.length() < 3 || email.length() > 50 || !email.contains("@") || !email.contains(".")) {
-                url = url + "2";
-                rd = request.getRequestDispatcher(url);
-                rd.forward(request, response);
-                return;
-            } else {
-                if (dao.isUserExisted(username) || dao.isUserExisted(email)) {
-                    url = url + "3";
-                    rd = request.getRequestDispatcher(url);
-                    rd.forward(request, response);
-                    return;
-                }
-            }
-
-            User user = new User(username, email, status, role);
-
-            user.setFullname(request.getParameter("fullname"));
-            user.setPhonenumber(request.getParameter("phonenumber"));
-            user.setAddress(request.getParameter("address"));
-
-            String madeRawPassword = user.makePassword();
-
-            if (dao.addUser(user) > 0) {
-                //Start sending email to user.
-                String subject = "Online Auction System - Account Information";
-                String body = "Dear " + username + ",\n"
-                        + "\n"
-                        + "Thank you for using OAS! Your account has been successfully created, you can now log into our system with the following details:\n"
-                        + "Username: " + username + "\n"
-                        + "Password: " + madeRawPassword + "\n"
-                        + "\n"
-                        + "Happy bidding,\n"
-                        + "Your friends at OAS.";
-                OtherDAO other = new OtherDAO();
-                other.sendMail(email, subject, body);
-                //Finish sending email
-                url = url + "0";
-                rd = request.getRequestDispatcher(url);
-                rd.forward(request, response);
-                return;
-            } else {
-                response.sendRedirect("notification.jsp?errorCode=1");
-            }
         } else if (service.equalsIgnoreCase("dashboard")) {
             HttpSession session = request.getSession(true);
             int userid = Integer.parseInt((String) session.getAttribute("userid"));
@@ -256,142 +172,6 @@ public class UserController extends HttpServlet {
             rd = request.getRequestDispatcher(cp);
             rd.forward(request, response);
             return;
-        } else if (service.equalsIgnoreCase("forgot_password")) {
-            rd = request.getRequestDispatcher(forgot_password + "?errorCode=0");
-            String usernameEmail = request.getParameter("username_email");
-            if (usernameEmail == null || usernameEmail.isEmpty()) {
-                rd = request.getRequestDispatcher(forgot_password + "?errorCode=1");
-            } else if (!dao.isUserExisted(usernameEmail)) {
-                rd = request.getRequestDispatcher(forgot_password + "?errorCode=2");
-            } else {
-                User user = dao.getUser(usernameEmail);
-                String email = user.getEmail();
-                if (email == null || email.isEmpty()) {
-                    rd = request.getRequestDispatcher(forgot_password + "?errorCode=3");
-                } else {
-                    OtherDAO other = new OtherDAO();
-                    String madeToken = other.makeTokenForUser(user.getId(), 24);
-                    if (madeToken.equalsIgnoreCase("existed")) {
-                        rd = request.getRequestDispatcher(forgot_password + "?errorCode=4");
-                    } else {
-                        //Start sending email to user.
-                        String domain = getServletContext().getInitParameter("domain");
-                        String subject = "Online Auction System - Account Password Recovery";
-                        String body = "Hi " + user.getUsername() + ",\n"
-                                + "\n"
-                                + "You're receiving this email because you requested a password reset for your OAS Account. If you did not request this change, you can safely ignore this email.\n"
-                                + "\n"
-                                + "To choose a new password and complete your request, please follow the link below:\n"
-                                + domain + "UserController?service=reset_password&token=" + madeToken + " \n"
-                                + "\n"
-                                + "You can change your password again at any time from within the OAS control panel by selecting My account > Change password.\n"
-                                + "\n"
-                                + "Thanks,\n"
-                                + "The OAS Team ";
-                        other.sendMail(email, subject, body);
-                        //Finish sending email
-                    }
-                }
-            }
-            rd.forward(request, response);
-            return;
-        } else if (service.equalsIgnoreCase("reset_password")) {
-            String token = (String) request.getParameter("token");
-            if (token == null || token.isEmpty()) {
-                rd = request.getRequestDispatcher(forgot_password + "?errorCode=5");
-                rd.forward(request, response);
-                return;
-            } else {
-                OtherDAO other = new OtherDAO();
-                String[] tokenData = new String[4];
-                tokenData = other.getTokenData(token);
-                String userIdString = tokenData[2];
-                if (userIdString == null || userIdString.isEmpty()) {
-                    rd = request.getRequestDispatcher(forgot_password + "?errorCode=5");
-                    rd.forward(request, response);
-                    return;
-                } else {
-                    int userid = Integer.parseInt(userIdString);
-                    User user = dao.getUser(userid);
-                    //System.out.println(user.getUsername());
-                    String newPassword = user.makePassword();
-                    //System.out.println(newPassword+" - "+user.getPassword());
-                    user.setStatus(0);
-                    //System.out.println(user.getStatus());
-                    if (dao.update(user)) {
-                        rd = request.getRequestDispatcher(reset_password + "?errorCode=0&token=" + token);
-                        rd.forward(request, response);
-                        return;
-                    } else {
-                        rd = request.getRequestDispatcher(forgot_password + "?errorCode=6");
-                        rd.forward(request, response);
-                        return;
-                    }
-                }
-            }
-        } else if (service.equalsIgnoreCase("reset_password_finish")) {
-            String tokenFinish = (String) request.getParameter("tokenFinish");
-
-            //Validate passwords first
-            String password1 = (String) request.getParameter("password1");
-            String password2 = (String) request.getParameter("password2");
-            //System.out.println(password1+"-"+password2);
-            OtherDAO other = new OtherDAO();
-            if (!other.isPasswordValid(password1) || !other.isPasswordValid(password2)) {
-                rd = request.getRequestDispatcher(reset_password + "?errorCode=1&token=" + tokenFinish);
-                rd.forward(request, response);
-                return;
-            } else if (!password1.equals(password2)) {
-                rd = request.getRequestDispatcher(reset_password + "?errorCode=2&token=" + tokenFinish);
-                rd.forward(request, response);
-                return;
-            } else {
-                if (tokenFinish == null || tokenFinish.isEmpty()) {
-                    rd = request.getRequestDispatcher(forgot_password + "?errorCode=7");
-                    rd.forward(request, response);
-                    return;
-                } else {
-                    String[] tokenData = new String[4];
-                    tokenData = other.getTokenData(tokenFinish);
-                    String userIdString = tokenData[2];
-                    if (userIdString == null || userIdString.isEmpty()) {
-                        rd = request.getRequestDispatcher(forgot_password + "?errorCode=7");
-                        rd.forward(request, response);
-                        return;
-                    } else {
-                        int userid = Integer.parseInt(userIdString);
-                        User user = dao.getUser(userid);
-                        //System.out.println(user.getUsername());
-                        String newPassword = other.getEncryptedPassword(password1, user.getSalt());
-                        user.setPassword(newPassword);
-                        //System.out.println(newPassword+" - "+user.getPassword());
-                        user.setStatus(1);
-                        //System.out.println(user.getStatus());
-                        if (dao.update(user) && other.cleanUserToken(userid)) { // Update everything and then clean the token.
-                            //All should be done by now, let's send some mails.
-                            String domain = getServletContext().getInitParameter("domain");
-                            String subject = "Online Auction System - Your Password has been changed successfully";
-                            String body = "Hi " + user.getUsername() + ",\n"
-                                    + "\n"
-                                    + "Your OAS password has been successfully updated\n"
-                                    + "\n"
-                                    + "If you did not request this password change or believe you're receiving this email in error, please contact OAS Administration Team for immediate assistance.\n"
-                                    + "\n"
-                                    + "Regards,\n"
-                                    + "Your friends at OAS ";
-                            other.sendMail(user.getEmail(), subject, body);
-                            //Finish sending email
-                            rd = request.getRequestDispatcher(reset_password);
-                            rd.forward(request, response);
-                            return;
-                        } else {
-                            rd = request.getRequestDispatcher(forgot_password + "?errorCode=6");
-                            rd.forward(request, response);
-                            return;
-                        }
-                    }
-                }
-            }
         } else if (service.equalsIgnoreCase("search")) {
             String search = request.getParameter("txtsearch");
             String role = request.getParameter("cb1");
@@ -433,7 +213,7 @@ public class UserController extends HttpServlet {
                 }
             } catch (DocumentException ex) {
                 System.out.println("Login Failed!");
-                Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         } else if (service.equalsIgnoreCase("logout")) {
@@ -475,7 +255,7 @@ public class UserController extends HttpServlet {
             user.setAddress(address);
             user.setFullname(fullname);
             user.setPhonenumber(phonenumber);
-            String madePassword = user.makePassword();
+            String madePassword = "adasdasd";//user.makePassword();
             System.out.println(madePassword);
             int n = dao.addUser(user);
             if (n > 0) {
@@ -489,7 +269,7 @@ public class UserController extends HttpServlet {
                         + "\n"
                         + "Happy bidding,\n"
                         + "Your friends at OAS.";
-                OtherDAO other = new OtherDAO();
+                FlightDAO other = new FlightDAO();
                 other.sendMail(email, subject, body);
                 //Finish sending email
                 rd = request.getRequestDispatcher(loginPage + "?errorCode=7&username=" + username);
@@ -541,7 +321,7 @@ public class UserController extends HttpServlet {
             Logger.getLogger(CategoryController.class
                     .getName()).log(Level.SEVERE, null, ex);
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(UserController.class
+            Logger.getLogger(Controller.class
                     .getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -561,10 +341,10 @@ public class UserController extends HttpServlet {
             processRequest(request, response);
 
         } catch (SQLException ex) {
-            Logger.getLogger(UserController.class
+            Logger.getLogger(Controller.class
                     .getName()).log(Level.SEVERE, null, ex);
         } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(UserController.class
+            Logger.getLogger(Controller.class
                     .getName()).log(Level.SEVERE, null, ex);
         }
     }

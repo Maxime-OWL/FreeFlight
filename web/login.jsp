@@ -35,7 +35,7 @@
             </div>
             <div class="login_middle">
                 <div class="login_lft">
-                    <form accept-charset="utf-8" method="post" action="UserController" name="loginForm" onSubmit="return validateLogin();">					
+                    <form accept-charset="utf-8" method="post" action="Controller" name="loginForm" onSubmit="return validateLogin();">					
                         <div class="login_form">
                             <div class="log_fields" style="width:460px;">
                                 <p>User name <span class="red">*</span>:</p>

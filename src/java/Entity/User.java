@@ -6,7 +6,7 @@
 package Entity;
 
 import DAO.FormatMoney;
-import DAO.OtherDAO;
+import DAO.FlightDAO;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -101,24 +101,6 @@ public class User {
 
     public String getSalt() {
         return salt;
-    }
-
-    public void makeSalt() {
-        DAO.OtherDAO other = new OtherDAO();
-        this.salt = other.makeRandomString(10, 10);
-    }
-
-    public String makePassword() throws NoSuchAlgorithmException {
-        if (this.salt == null) {
-            this.makeSalt();
-        }
-        DAO.OtherDAO other = new OtherDAO();
-        String newPassword = other.makeRandomString(10, 10);
-        String step1 = other.getMd5FromString(newPassword);
-        String step2 = step1 + this.salt;
-        String step3 = other.getMd5FromString(step2);
-        this.password = step3;
-        return newPassword;
     }
 
     public void setSalt(String salt) {
@@ -262,7 +244,7 @@ public class User {
     }
 
     public String getFormattedJoinDate() throws ParseException {
-        OtherDAO other = new OtherDAO();
+        FlightDAO other = new FlightDAO();
         return other.formatDate(this.joinDate);
     }
     

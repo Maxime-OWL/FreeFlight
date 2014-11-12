@@ -7,7 +7,7 @@
 package Entity;
 
 import DAO.FormatMoney;
-import DAO.OtherDAO;
+import DAO.FlightDAO;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;

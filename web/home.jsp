@@ -4,9 +4,6 @@
     Author     : Maxime
 --%>
 
-<%@page import="Entity.Auction"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,8 +13,8 @@
         <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
         <link rel="shortcut icon" href="images/fav-10.gif" type="image/x-icon" />
         <script language="JavaScript" src="JavaScript/countdown.js"></script>
-        <script language="JavaScript" src="JavaScript/ajax_watchlist.js"></script>
     </head>
-    <body>  
+    <body>
+        
     </body>
 </html>

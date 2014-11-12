@@ -263,42 +263,6 @@ public class UserDAO {
         return n;
     }
 
-    public String[] logUserIn(String username, String password) throws SQLException, NoSuchAlgorithmException {
-        String[] result = new String[5];
-        User user = getUser(username);
-        //System.out.println(user.getUsername());
-        if ((user.getUsername() == null) || (!user.getUsername().equalsIgnoreCase(username))) {
-            result[0] = "fail";
-            result[1] = "1"; //error code
-            return result;
-        } else if (user.getStatusId() == 0) {
-            result[0] = "fail";
-            result[1] = "5";
-            return result;
-        }
-        String dbPassword = user.getPassword();
-        String dbSalt = user.getSalt();
-
-        OtherDAO other = new OtherDAO();
-        String step1 = other.getMd5FromString(password);
-        String step2 = step1 + dbSalt;
-        String encryptedPassword = other.getMd5FromString(step2);
-
-        if (!encryptedPassword.equalsIgnoreCase(dbPassword)) {
-            result[0] = "fail";
-            result[1] = "6";
-            return result;
-        }
-
-        result[0] = "ok"; //success/fail
-        result[1] = "1"; //error code
-        result[2] = user.getUsername();
-        result[3] = Integer.toString(user.getId()); //
-        result[4] = Integer.toString(user.getRoleId());
-
-        return result;
-    }
-
     public String getSalt(String username) throws SQLException {
         String salt = null;
         String sql = "SELECT salt FROM user WHERE username = '" + username + "'";
@@ -329,33 +293,7 @@ public class UserDAO {
         return id;
     }
 
-    public String changePassword(String oldpass, String newpass, int userid) throws SQLException, NoSuchAlgorithmException {
-        User user = getUser(userid);
-        OtherDAO other = new OtherDAO();
-        String salt = user.getSalt();
-        String oldPassEncrypted = other.getEncryptedPassword(oldpass, salt);
-        if (!user.getPassword().equals(oldPassEncrypted)) {
-            return "4"; // errorCode
-        }
-        String newPassEncrypted = other.getEncryptedPassword(newpass, salt);
-        String sql = "UPDATE user SET password = ? WHERE id = ?";
-        pre = conn.prepareStatement(sql);
-        pre.setString(1, newPassEncrypted);
-        pre.setInt(2, userid);
-        pre.executeUpdate();
-        //Start sending email to user.
-        String username = user.getUsername();
-        String subject = "Online Auction System - Account password changed";
-        String body = "Dear " + username + ",\n"
-                + "\n"
-                + "Your account password has been changed from the OAS control panel. If you didn't change the password please notify an administrator immediately!\n"
-                + "\n"
-                + "Happy bidding,\n"
-                + "Your friends at OAS.";
-        other.sendMail(user.getEmail(), subject, body);
-        //Finish sending email
-        return "0";
-    }
+    
 
     public boolean isUserExisted(String clue) throws SQLException {
         if (clue == null || clue.isEmpty()) {

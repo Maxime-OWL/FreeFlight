@@ -2,11 +2,11 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <servlet>
         <servlet-name>UserController</servlet-name>
-        <servlet-class>Controller.UserController</servlet-class>
+        <servlet-class>Controller.Controller</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AuctionController</servlet-name>
-        <servlet-class>Controller.AuctionController</servlet-class>
+        <servlet-class>Controller.FlightController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CategoryController</servlet-name>
@@ -23,6 +23,10 @@
     <servlet>
         <servlet-name>WatchlistController</servlet-name>
         <servlet-class>Controller.WatchlistController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>Controller.Controller</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserController</servlet-name>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>WatchlistController</servlet-name>
         <url-pattern>/WatchlistController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -85,5 +93,4 @@
         <param-name>domain</param-name>
         <param-value>http://localhost:8084/OAS/</param-value>
     </context-param>
-    
 </web-app>

@@ -1,702 +1,902 @@
 <?xml version="1.0" encoding="UTF-8" ?><Flights>
 	<Flight>
 		<FlightId>1</FlightId>
-		<Origin>7</Origin>
-		<Destination>2</Destination>
-		<Fee>$18.76</Fee>
-		<Plane>9</Plane>
+		<Origin>2</Origin>
+		<Destination>6</Destination>
+		<Fee>$68.95</Fee>
+		<Plane>8</Plane>
+		<DepartureTime>2015-10-06 00:20:12</DepartureTime>
+		<ArrivalTime>2014-04-13 10:11:15</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>2</FlightId>
-		<Origin>10</Origin>
-		<Destination>6</Destination>
-		<Fee>$96.37</Fee>
-		<Plane>10</Plane>
+		<Origin>15</Origin>
+		<Destination>14</Destination>
+		<Fee>$88.47</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-05-07 13:11:03</DepartureTime>
+		<ArrivalTime>2014-05-03 22:28:23</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>3</FlightId>
-		<Origin>13</Origin>
-		<Destination>9</Destination>
-		<Fee>$62.88</Fee>
-		<Plane>7</Plane>
+		<Origin>2</Origin>
+		<Destination>6</Destination>
+		<Fee>$31.16</Fee>
+		<Plane>1</Plane>
+		<DepartureTime>2015-04-29 09:26:41</DepartureTime>
+		<ArrivalTime>2015-03-15 14:04:57</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>4</FlightId>
-		<Origin>5</Origin>
-		<Destination>10</Destination>
-		<Fee>$31.23</Fee>
-		<Plane>1</Plane>
+		<Origin>13</Origin>
+		<Destination>15</Destination>
+		<Fee>$1.64</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2015-02-04 05:17:08</DepartureTime>
+		<ArrivalTime>2014-12-13 23:08:16</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>5</FlightId>
-		<Origin>5</Origin>
-		<Destination>10</Destination>
-		<Fee>$22.66</Fee>
+		<Origin>12</Origin>
+		<Destination>2</Destination>
+		<Fee>$86.71</Fee>
 		<Plane>10</Plane>
+		<DepartureTime>2014-04-22 10:20:54</DepartureTime>
+		<ArrivalTime>2014-03-02 02:51:57</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>6</FlightId>
-		<Origin>10</Origin>
-		<Destination>1</Destination>
-		<Fee>$45.87</Fee>
-		<Plane>2</Plane>
+		<Origin>4</Origin>
+		<Destination>11</Destination>
+		<Fee>$91.93</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2013-11-11 07:42:51</DepartureTime>
+		<ArrivalTime>2015-06-03 08:43:37</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>7</FlightId>
-		<Origin>7</Origin>
-		<Destination>2</Destination>
-		<Fee>$68.90</Fee>
-		<Plane>9</Plane>
+		<Origin>9</Origin>
+		<Destination>15</Destination>
+		<Fee>$22.53</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-01-09 04:59:11</DepartureTime>
+		<ArrivalTime>2015-05-11 08:13:51</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>8</FlightId>
-		<Origin>12</Origin>
-		<Destination>3</Destination>
-		<Fee>$85.30</Fee>
+		<Origin>2</Origin>
+		<Destination>4</Destination>
+		<Fee>$65.50</Fee>
 		<Plane>6</Plane>
+		<DepartureTime>2015-01-07 01:06:39</DepartureTime>
+		<ArrivalTime>2014-07-31 23:21:44</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>9</FlightId>
-		<Origin>1</Origin>
-		<Destination>13</Destination>
-		<Fee>$18.19</Fee>
-		<Plane>10</Plane>
+		<Origin>8</Origin>
+		<Destination>3</Destination>
+		<Fee>$15.39</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2013-11-25 15:58:23</DepartureTime>
+		<ArrivalTime>2014-08-26 11:36:47</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>10</FlightId>
-		<Origin>15</Origin>
-		<Destination>9</Destination>
-		<Fee>$63.37</Fee>
-		<Plane>1</Plane>
+		<Origin>2</Origin>
+		<Destination>6</Destination>
+		<Fee>$78.86</Fee>
+		<Plane>8</Plane>
+		<DepartureTime>2015-03-17 07:14:36</DepartureTime>
+		<ArrivalTime>2014-11-15 17:20:16</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>11</FlightId>
-		<Origin>10</Origin>
-		<Destination>14</Destination>
-		<Fee>$79.34</Fee>
+		<Origin>3</Origin>
+		<Destination>7</Destination>
+		<Fee>$30.74</Fee>
 		<Plane>5</Plane>
+		<DepartureTime>2015-05-02 10:10:59</DepartureTime>
+		<ArrivalTime>2015-05-15 13:15:15</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>12</FlightId>
-		<Origin>6</Origin>
-		<Destination>15</Destination>
-		<Fee>$64.87</Fee>
-		<Plane>3</Plane>
+		<Origin>14</Origin>
+		<Destination>3</Destination>
+		<Fee>$6.42</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-05-15 11:04:02</DepartureTime>
+		<ArrivalTime>2015-07-14 17:21:12</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>13</FlightId>
-		<Origin>4</Origin>
-		<Destination>7</Destination>
-		<Fee>$95.91</Fee>
-		<Plane>2</Plane>
+		<Origin>3</Origin>
+		<Destination>3</Destination>
+		<Fee>$42.16</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-12-25 13:07:54</DepartureTime>
+		<ArrivalTime>2015-04-17 03:02:38</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>14</FlightId>
-		<Origin>13</Origin>
-		<Destination>8</Destination>
-		<Fee>$61.66</Fee>
-		<Plane>8</Plane>
+		<Origin>2</Origin>
+		<Destination>3</Destination>
+		<Fee>$20.06</Fee>
+		<Plane>3</Plane>
+		<DepartureTime>2015-05-20 09:17:36</DepartureTime>
+		<ArrivalTime>2014-12-25 14:06:54</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>15</FlightId>
-		<Origin>2</Origin>
-		<Destination>10</Destination>
-		<Fee>$67.67</Fee>
-		<Plane>1</Plane>
+		<Origin>11</Origin>
+		<Destination>1</Destination>
+		<Fee>$59.03</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2014-06-15 05:58:48</DepartureTime>
+		<ArrivalTime>2013-12-11 23:27:59</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>16</FlightId>
-		<Origin>9</Origin>
-		<Destination>14</Destination>
-		<Fee>$7.78</Fee>
-		<Plane>1</Plane>
+		<Origin>10</Origin>
+		<Destination>9</Destination>
+		<Fee>$12.49</Fee>
+		<Plane>3</Plane>
+		<DepartureTime>2014-08-29 08:50:13</DepartureTime>
+		<ArrivalTime>2014-11-15 05:57:16</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>17</FlightId>
 		<Origin>8</Origin>
 		<Destination>14</Destination>
-		<Fee>$59.14</Fee>
-		<Plane>3</Plane>
+		<Fee>$68.84</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-11-28 08:17:58</DepartureTime>
+		<ArrivalTime>2015-08-15 13:54:28</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>18</FlightId>
-		<Origin>10</Origin>
-		<Destination>3</Destination>
-		<Fee>$81.26</Fee>
-		<Plane>5</Plane>
+		<Origin>12</Origin>
+		<Destination>10</Destination>
+		<Fee>$37.52</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2015-09-11 03:37:42</DepartureTime>
+		<ArrivalTime>2014-04-26 15:08:11</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>19</FlightId>
-		<Origin>9</Origin>
-		<Destination>14</Destination>
-		<Fee>$15.40</Fee>
-		<Plane>3</Plane>
+		<Origin>4</Origin>
+		<Destination>4</Destination>
+		<Fee>$35.94</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2015-02-03 13:32:18</DepartureTime>
+		<ArrivalTime>2014-06-10 23:55:56</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>20</FlightId>
-		<Origin>7</Origin>
-		<Destination>10</Destination>
-		<Fee>$71.38</Fee>
-		<Plane>6</Plane>
+		<Origin>2</Origin>
+		<Destination>7</Destination>
+		<Fee>$58.94</Fee>
+		<Plane>9</Plane>
+		<DepartureTime>2015-11-05 04:37:43</DepartureTime>
+		<ArrivalTime>2014-12-14 07:44:56</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>21</FlightId>
-		<Origin>6</Origin>
-		<Destination>9</Destination>
-		<Fee>$45.58</Fee>
-		<Plane>7</Plane>
+		<Origin>13</Origin>
+		<Destination>14</Destination>
+		<Fee>$5.55</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2015-10-28 00:08:38</DepartureTime>
+		<ArrivalTime>2014-03-03 05:01:35</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>22</FlightId>
-		<Origin>6</Origin>
-		<Destination>11</Destination>
-		<Fee>$40.72</Fee>
-		<Plane>9</Plane>
+		<Origin>7</Origin>
+		<Destination>10</Destination>
+		<Fee>$74.53</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2015-10-18 05:14:38</DepartureTime>
+		<ArrivalTime>2014-02-19 10:42:20</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>23</FlightId>
-		<Origin>9</Origin>
-		<Destination>3</Destination>
-		<Fee>$93.98</Fee>
-		<Plane>7</Plane>
+		<Origin>11</Origin>
+		<Destination>6</Destination>
+		<Fee>$48.51</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-11-17 07:54:54</DepartureTime>
+		<ArrivalTime>2014-07-07 23:21:43</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>24</FlightId>
-		<Origin>1</Origin>
-		<Destination>3</Destination>
-		<Fee>$29.26</Fee>
+		<Origin>10</Origin>
+		<Destination>14</Destination>
+		<Fee>$9.63</Fee>
 		<Plane>2</Plane>
+		<DepartureTime>2015-10-14 20:16:10</DepartureTime>
+		<ArrivalTime>2014-10-13 14:33:47</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>25</FlightId>
-		<Origin>12</Origin>
-		<Destination>3</Destination>
-		<Fee>$26.59</Fee>
-		<Plane>8</Plane>
+		<Origin>10</Origin>
+		<Destination>2</Destination>
+		<Fee>$30.03</Fee>
+		<Plane>3</Plane>
+		<DepartureTime>2015-04-13 03:02:13</DepartureTime>
+		<ArrivalTime>2014-10-09 20:15:40</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>26</FlightId>
-		<Origin>10</Origin>
+		<Origin>14</Origin>
 		<Destination>12</Destination>
-		<Fee>$86.10</Fee>
-		<Plane>5</Plane>
+		<Fee>$29.54</Fee>
+		<Plane>9</Plane>
+		<DepartureTime>2014-10-20 19:05:36</DepartureTime>
+		<ArrivalTime>2014-05-01 03:35:12</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>27</FlightId>
-		<Origin>14</Origin>
-		<Destination>8</Destination>
-		<Fee>$54.54</Fee>
-		<Plane>10</Plane>
+		<Origin>10</Origin>
+		<Destination>2</Destination>
+		<Fee>$80.39</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2014-06-13 13:19:29</DepartureTime>
+		<ArrivalTime>2014-03-04 17:20:47</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>28</FlightId>
-		<Origin>8</Origin>
-		<Destination>14</Destination>
-		<Fee>$36.97</Fee>
-		<Plane>7</Plane>
+		<Origin>10</Origin>
+		<Destination>12</Destination>
+		<Fee>$26.26</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2014-03-11 13:54:12</DepartureTime>
+		<ArrivalTime>2015-08-07 00:10:41</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>29</FlightId>
-		<Origin>4</Origin>
-		<Destination>6</Destination>
-		<Fee>$85.46</Fee>
-		<Plane>10</Plane>
+		<Origin>1</Origin>
+		<Destination>13</Destination>
+		<Fee>$48.43</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2014-03-23 07:33:49</DepartureTime>
+		<ArrivalTime>2014-04-05 13:17:03</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>30</FlightId>
-		<Origin>5</Origin>
-		<Destination>8</Destination>
-		<Fee>$70.16</Fee>
-		<Plane>3</Plane>
+		<Origin>15</Origin>
+		<Destination>3</Destination>
+		<Fee>$20.68</Fee>
+		<Plane>8</Plane>
+		<DepartureTime>2015-02-17 07:41:40</DepartureTime>
+		<ArrivalTime>2014-05-07 03:01:12</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>31</FlightId>
-		<Origin>15</Origin>
-		<Destination>9</Destination>
-		<Fee>$18.82</Fee>
-		<Plane>2</Plane>
+		<Origin>2</Origin>
+		<Destination>5</Destination>
+		<Fee>$62.25</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2015-08-17 05:52:53</DepartureTime>
+		<ArrivalTime>2015-11-03 12:05:42</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>32</FlightId>
-		<Origin>8</Origin>
-		<Destination>4</Destination>
-		<Fee>$57.04</Fee>
-		<Plane>5</Plane>
+		<Origin>12</Origin>
+		<Destination>15</Destination>
+		<Fee>$44.83</Fee>
+		<Plane>9</Plane>
+		<DepartureTime>2013-12-15 01:44:24</DepartureTime>
+		<ArrivalTime>2014-12-17 07:40:49</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>33</FlightId>
-		<Origin>5</Origin>
-		<Destination>11</Destination>
-		<Fee>$92.39</Fee>
-		<Plane>5</Plane>
+		<Origin>3</Origin>
+		<Destination>4</Destination>
+		<Fee>$60.03</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2015-03-26 23:26:17</DepartureTime>
+		<ArrivalTime>2015-03-29 21:17:45</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>34</FlightId>
-		<Origin>9</Origin>
-		<Destination>14</Destination>
-		<Fee>$12.60</Fee>
-		<Plane>3</Plane>
+		<Origin>3</Origin>
+		<Destination>10</Destination>
+		<Fee>$31.81</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2015-08-06 03:32:07</DepartureTime>
+		<ArrivalTime>2014-09-19 04:14:25</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>35</FlightId>
-		<Origin>8</Origin>
-		<Destination>10</Destination>
-		<Fee>$40.30</Fee>
-		<Plane>10</Plane>
+		<Origin>9</Origin>
+		<Destination>1</Destination>
+		<Fee>$62.83</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2013-11-11 07:45:49</DepartureTime>
+		<ArrivalTime>2014-07-25 01:14:54</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>36</FlightId>
-		<Origin>7</Origin>
-		<Destination>12</Destination>
-		<Fee>$98.02</Fee>
-		<Plane>8</Plane>
+		<Origin>8</Origin>
+		<Destination>11</Destination>
+		<Fee>$4.73</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2015-07-02 07:54:34</DepartureTime>
+		<ArrivalTime>2015-07-08 09:26:52</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>37</FlightId>
-		<Origin>6</Origin>
-		<Destination>2</Destination>
-		<Fee>$20.75</Fee>
-		<Plane>2</Plane>
+		<Origin>7</Origin>
+		<Destination>10</Destination>
+		<Fee>$40.95</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-07-24 04:49:50</DepartureTime>
+		<ArrivalTime>2015-08-26 20:04:34</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>38</FlightId>
-		<Origin>14</Origin>
-		<Destination>3</Destination>
-		<Fee>$46.11</Fee>
-		<Plane>1</Plane>
+		<Origin>9</Origin>
+		<Destination>9</Destination>
+		<Fee>$94.84</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2014-09-19 17:01:19</DepartureTime>
+		<ArrivalTime>2014-03-07 04:59:51</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>39</FlightId>
-		<Origin>15</Origin>
-		<Destination>12</Destination>
-		<Fee>$0.30</Fee>
-		<Plane>1</Plane>
+		<Origin>11</Origin>
+		<Destination>8</Destination>
+		<Fee>$48.58</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2015-05-08 07:33:14</DepartureTime>
+		<ArrivalTime>2014-08-26 18:11:28</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>40</FlightId>
-		<Origin>5</Origin>
-		<Destination>1</Destination>
-		<Fee>$15.87</Fee>
-		<Plane>9</Plane>
+		<Origin>7</Origin>
+		<Destination>12</Destination>
+		<Fee>$69.65</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2013-12-14 03:33:51</DepartureTime>
+		<ArrivalTime>2015-06-19 23:39:43</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>41</FlightId>
-		<Origin>6</Origin>
-		<Destination>8</Destination>
-		<Fee>$98.36</Fee>
+		<Origin>8</Origin>
+		<Destination>3</Destination>
+		<Fee>$83.97</Fee>
 		<Plane>6</Plane>
+		<DepartureTime>2015-09-11 19:51:50</DepartureTime>
+		<ArrivalTime>2014-12-17 21:13:37</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>42</FlightId>
-		<Origin>2</Origin>
-		<Destination>10</Destination>
-		<Fee>$79.93</Fee>
-		<Plane>9</Plane>
+		<Origin>6</Origin>
+		<Destination>1</Destination>
+		<Fee>$86.56</Fee>
+		<Plane>1</Plane>
+		<DepartureTime>2014-10-19 14:00:45</DepartureTime>
+		<ArrivalTime>2015-04-15 01:30:50</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>43</FlightId>
-		<Origin>2</Origin>
-		<Destination>9</Destination>
-		<Fee>$53.67</Fee>
-		<Plane>9</Plane>
+		<Origin>5</Origin>
+		<Destination>2</Destination>
+		<Fee>$51.71</Fee>
+		<Plane>1</Plane>
+		<DepartureTime>2015-03-31 07:49:45</DepartureTime>
+		<ArrivalTime>2014-12-18 11:35:15</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>44</FlightId>
 		<Origin>15</Origin>
-		<Destination>14</Destination>
-		<Fee>$51.74</Fee>
-		<Plane>10</Plane>
+		<Destination>3</Destination>
+		<Fee>$6.13</Fee>
+		<Plane>7</Plane>
+		<DepartureTime>2015-11-10 08:05:18</DepartureTime>
+		<ArrivalTime>2014-07-17 11:06:54</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>45</FlightId>
-		<Origin>3</Origin>
-		<Destination>3</Destination>
-		<Fee>$36.83</Fee>
-		<Plane>5</Plane>
+		<Origin>11</Origin>
+		<Destination>9</Destination>
+		<Fee>$64.49</Fee>
+		<Plane>8</Plane>
+		<DepartureTime>2014-08-31 00:57:18</DepartureTime>
+		<ArrivalTime>2014-08-08 12:31:00</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>46</FlightId>
-		<Origin>10</Origin>
-		<Destination>9</Destination>
-		<Fee>$57.64</Fee>
-		<Plane>1</Plane>
+		<Origin>4</Origin>
+		<Destination>8</Destination>
+		<Fee>$1.04</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2014-07-10 15:58:45</DepartureTime>
+		<ArrivalTime>2015-03-22 08:55:48</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>47</FlightId>
-		<Origin>6</Origin>
-		<Destination>13</Destination>
-		<Fee>$90.21</Fee>
-		<Plane>9</Plane>
+		<Origin>1</Origin>
+		<Destination>12</Destination>
+		<Fee>$91.76</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2013-12-15 14:33:18</DepartureTime>
+		<ArrivalTime>2014-09-19 03:41:50</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>48</FlightId>
-		<Origin>8</Origin>
-		<Destination>8</Destination>
-		<Fee>$4.35</Fee>
-		<Plane>8</Plane>
+		<Origin>6</Origin>
+		<Destination>3</Destination>
+		<Fee>$86.84</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2015-10-09 18:13:48</DepartureTime>
+		<ArrivalTime>2014-01-24 21:14:05</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>49</FlightId>
-		<Origin>2</Origin>
-		<Destination>12</Destination>
-		<Fee>$90.61</Fee>
-		<Plane>6</Plane>
+		<Origin>3</Origin>
+		<Destination>7</Destination>
+		<Fee>$62.62</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2015-06-22 13:35:08</DepartureTime>
+		<ArrivalTime>2014-09-03 15:00:09</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>50</FlightId>
-		<Origin>3</Origin>
-		<Destination>6</Destination>
-		<Fee>$8.01</Fee>
-		<Plane>1</Plane>
+		<Origin>7</Origin>
+		<Destination>12</Destination>
+		<Fee>$28.73</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2014-02-10 19:30:47</DepartureTime>
+		<ArrivalTime>2015-11-03 03:53:20</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>51</FlightId>
-		<Origin>7</Origin>
-		<Destination>6</Destination>
-		<Fee>$79.97</Fee>
-		<Plane>1</Plane>
+		<Origin>10</Origin>
+		<Destination>2</Destination>
+		<Fee>$58.53</Fee>
+		<Plane>9</Plane>
+		<DepartureTime>2014-05-15 00:03:56</DepartureTime>
+		<ArrivalTime>2014-03-14 00:21:43</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>52</FlightId>
-		<Origin>7</Origin>
-		<Destination>5</Destination>
-		<Fee>$47.20</Fee>
-		<Plane>4</Plane>
+		<Origin>8</Origin>
+		<Destination>4</Destination>
+		<Fee>$6.57</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2015-04-03 08:52:23</DepartureTime>
+		<ArrivalTime>2015-05-06 15:36:41</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>53</FlightId>
-		<Origin>6</Origin>
-		<Destination>5</Destination>
-		<Fee>$9.40</Fee>
-		<Plane>10</Plane>
+		<Origin>4</Origin>
+		<Destination>14</Destination>
+		<Fee>$82.91</Fee>
+		<Plane>9</Plane>
+		<DepartureTime>2014-03-26 02:19:20</DepartureTime>
+		<ArrivalTime>2014-10-20 12:37:17</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>54</FlightId>
-		<Origin>11</Origin>
-		<Destination>15</Destination>
-		<Fee>$98.15</Fee>
-		<Plane>5</Plane>
+		<Origin>14</Origin>
+		<Destination>2</Destination>
+		<Fee>$14.07</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2015-07-13 20:47:36</DepartureTime>
+		<ArrivalTime>2014-05-26 23:04:34</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>55</FlightId>
-		<Origin>5</Origin>
-		<Destination>4</Destination>
-		<Fee>$47.54</Fee>
-		<Plane>10</Plane>
+		<Origin>1</Origin>
+		<Destination>10</Destination>
+		<Fee>$66.23</Fee>
+		<Plane>9</Plane>
+		<DepartureTime>2014-05-04 10:15:56</DepartureTime>
+		<ArrivalTime>2015-10-09 17:05:59</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>56</FlightId>
-		<Origin>8</Origin>
-		<Destination>2</Destination>
-		<Fee>$3.96</Fee>
-		<Plane>1</Plane>
+		<Origin>11</Origin>
+		<Destination>8</Destination>
+		<Fee>$82.90</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2014-11-04 01:37:09</DepartureTime>
+		<ArrivalTime>2013-12-24 11:09:36</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>57</FlightId>
-		<Origin>7</Origin>
-		<Destination>8</Destination>
-		<Fee>$9.18</Fee>
+		<Origin>8</Origin>
+		<Destination>5</Destination>
+		<Fee>$67.44</Fee>
 		<Plane>6</Plane>
+		<DepartureTime>2014-11-24 18:08:17</DepartureTime>
+		<ArrivalTime>2014-12-20 07:36:01</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>58</FlightId>
-		<Origin>1</Origin>
-		<Destination>14</Destination>
-		<Fee>$16.14</Fee>
-		<Plane>8</Plane>
+		<Origin>10</Origin>
+		<Destination>12</Destination>
+		<Fee>$27.12</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-05-04 02:02:36</DepartureTime>
+		<ArrivalTime>2015-08-09 18:27:23</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>59</FlightId>
-		<Origin>11</Origin>
-		<Destination>7</Destination>
-		<Fee>$11.29</Fee>
-		<Plane>4</Plane>
+		<Origin>2</Origin>
+		<Destination>4</Destination>
+		<Fee>$43.18</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2013-12-28 07:36:43</DepartureTime>
+		<ArrivalTime>2014-03-06 02:48:41</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>60</FlightId>
-		<Origin>14</Origin>
-		<Destination>14</Destination>
-		<Fee>$78.19</Fee>
-		<Plane>3</Plane>
+		<Origin>12</Origin>
+		<Destination>5</Destination>
+		<Fee>$58.92</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2015-06-08 19:17:28</DepartureTime>
+		<ArrivalTime>2014-06-28 17:03:29</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>61</FlightId>
-		<Origin>13</Origin>
-		<Destination>7</Destination>
-		<Fee>$82.50</Fee>
-		<Plane>1</Plane>
+		<Origin>2</Origin>
+		<Destination>14</Destination>
+		<Fee>$66.85</Fee>
+		<Plane>3</Plane>
+		<DepartureTime>2015-08-11 13:57:41</DepartureTime>
+		<ArrivalTime>2015-02-17 05:45:11</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>62</FlightId>
-		<Origin>3</Origin>
-		<Destination>13</Destination>
-		<Fee>$56.44</Fee>
-		<Plane>7</Plane>
+		<Origin>1</Origin>
+		<Destination>6</Destination>
+		<Fee>$49.69</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2015-03-11 08:11:33</DepartureTime>
+		<ArrivalTime>2014-11-19 09:39:20</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>63</FlightId>
 		<Origin>11</Origin>
-		<Destination>2</Destination>
-		<Fee>$59.78</Fee>
+		<Destination>8</Destination>
+		<Fee>$8.45</Fee>
 		<Plane>7</Plane>
+		<DepartureTime>2014-03-18 22:08:24</DepartureTime>
+		<ArrivalTime>2014-03-09 09:12:23</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>64</FlightId>
-		<Origin>11</Origin>
-		<Destination>9</Destination>
-		<Fee>$12.08</Fee>
-		<Plane>7</Plane>
+		<Origin>9</Origin>
+		<Destination>12</Destination>
+		<Fee>$45.60</Fee>
+		<Plane>3</Plane>
+		<DepartureTime>2013-12-21 03:06:23</DepartureTime>
+		<ArrivalTime>2013-12-29 19:40:04</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>65</FlightId>
-		<Origin>9</Origin>
-		<Destination>7</Destination>
-		<Fee>$50.18</Fee>
-		<Plane>6</Plane>
+		<Origin>12</Origin>
+		<Destination>11</Destination>
+		<Fee>$80.43</Fee>
+		<Plane>1</Plane>
+		<DepartureTime>2014-12-11 20:13:20</DepartureTime>
+		<ArrivalTime>2014-05-17 05:03:34</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>66</FlightId>
-		<Origin>1</Origin>
-		<Destination>10</Destination>
-		<Fee>$59.18</Fee>
-		<Plane>5</Plane>
+		<Origin>15</Origin>
+		<Destination>5</Destination>
+		<Fee>$84.59</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2014-02-04 07:35:23</DepartureTime>
+		<ArrivalTime>2014-11-24 20:28:02</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>67</FlightId>
-		<Origin>13</Origin>
-		<Destination>10</Destination>
-		<Fee>$7.84</Fee>
-		<Plane>6</Plane>
+		<Origin>8</Origin>
+		<Destination>8</Destination>
+		<Fee>$58.75</Fee>
+		<Plane>7</Plane>
+		<DepartureTime>2014-04-12 19:53:44</DepartureTime>
+		<ArrivalTime>2014-03-29 23:57:30</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>68</FlightId>
-		<Origin>13</Origin>
-		<Destination>4</Destination>
-		<Fee>$45.01</Fee>
-		<Plane>1</Plane>
+		<Origin>9</Origin>
+		<Destination>5</Destination>
+		<Fee>$8.48</Fee>
+		<Plane>7</Plane>
+		<DepartureTime>2014-10-10 03:48:03</DepartureTime>
+		<ArrivalTime>2015-08-05 06:18:54</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>69</FlightId>
-		<Origin>12</Origin>
-		<Destination>14</Destination>
-		<Fee>$90.38</Fee>
-		<Plane>2</Plane>
+		<Origin>7</Origin>
+		<Destination>10</Destination>
+		<Fee>$64.70</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-12-10 13:40:32</DepartureTime>
+		<ArrivalTime>2015-01-26 19:25:40</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>70</FlightId>
-		<Origin>12</Origin>
-		<Destination>12</Destination>
-		<Fee>$64.98</Fee>
-		<Plane>10</Plane>
+		<Origin>2</Origin>
+		<Destination>10</Destination>
+		<Fee>$48.97</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2015-01-17 20:32:04</DepartureTime>
+		<ArrivalTime>2014-08-02 18:52:46</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>71</FlightId>
-		<Origin>4</Origin>
-		<Destination>13</Destination>
-		<Fee>$81.91</Fee>
-		<Plane>6</Plane>
+		<Origin>2</Origin>
+		<Destination>15</Destination>
+		<Fee>$81.00</Fee>
+		<Plane>7</Plane>
+		<DepartureTime>2015-03-09 16:48:36</DepartureTime>
+		<ArrivalTime>2015-08-11 13:04:20</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>72</FlightId>
-		<Origin>1</Origin>
-		<Destination>1</Destination>
-		<Fee>$63.69</Fee>
-		<Plane>1</Plane>
+		<Origin>5</Origin>
+		<Destination>14</Destination>
+		<Fee>$49.61</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2013-12-15 21:04:25</DepartureTime>
+		<ArrivalTime>2014-01-21 23:20:12</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>73</FlightId>
-		<Origin>6</Origin>
-		<Destination>13</Destination>
-		<Fee>$34.27</Fee>
-		<Plane>5</Plane>
+		<Origin>15</Origin>
+		<Destination>1</Destination>
+		<Fee>$89.50</Fee>
+		<Plane>8</Plane>
+		<DepartureTime>2015-08-14 20:41:12</DepartureTime>
+		<ArrivalTime>2014-09-12 14:24:03</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>74</FlightId>
-		<Origin>9</Origin>
-		<Destination>8</Destination>
-		<Fee>$27.61</Fee>
-		<Plane>1</Plane>
+		<Origin>8</Origin>
+		<Destination>2</Destination>
+		<Fee>$17.47</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2015-05-24 21:00:39</DepartureTime>
+		<ArrivalTime>2014-07-15 15:11:22</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>75</FlightId>
-		<Origin>8</Origin>
+		<Origin>3</Origin>
 		<Destination>2</Destination>
-		<Fee>$21.71</Fee>
-		<Plane>8</Plane>
+		<Fee>$27.34</Fee>
+		<Plane>1</Plane>
+		<DepartureTime>2014-09-19 00:11:04</DepartureTime>
+		<ArrivalTime>2014-11-21 03:20:22</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>76</FlightId>
-		<Origin>10</Origin>
-		<Destination>1</Destination>
-		<Fee>$47.37</Fee>
-		<Plane>8</Plane>
+		<Origin>7</Origin>
+		<Destination>13</Destination>
+		<Fee>$15.32</Fee>
+		<Plane>1</Plane>
+		<DepartureTime>2014-07-24 22:10:44</DepartureTime>
+		<ArrivalTime>2015-03-14 20:59:57</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>77</FlightId>
-		<Origin>9</Origin>
-		<Destination>4</Destination>
-		<Fee>$91.13</Fee>
-		<Plane>4</Plane>
+		<Origin>12</Origin>
+		<Destination>14</Destination>
+		<Fee>$55.89</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2013-12-06 11:14:56</DepartureTime>
+		<ArrivalTime>2015-01-24 14:08:21</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>78</FlightId>
-		<Origin>1</Origin>
-		<Destination>10</Destination>
-		<Fee>$50.73</Fee>
-		<Plane>10</Plane>
+		<Origin>2</Origin>
+		<Destination>8</Destination>
+		<Fee>$51.93</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-08-04 12:32:57</DepartureTime>
+		<ArrivalTime>2015-02-23 00:20:32</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>79</FlightId>
-		<Origin>15</Origin>
-		<Destination>13</Destination>
-		<Fee>$55.33</Fee>
-		<Plane>6</Plane>
+		<Origin>10</Origin>
+		<Destination>7</Destination>
+		<Fee>$6.79</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-11-20 17:15:25</DepartureTime>
+		<ArrivalTime>2015-01-29 07:17:47</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>80</FlightId>
 		<Origin>2</Origin>
-		<Destination>8</Destination>
-		<Fee>$66.39</Fee>
-		<Plane>5</Plane>
+		<Destination>4</Destination>
+		<Fee>$46.08</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-06-28 13:19:16</DepartureTime>
+		<ArrivalTime>2015-07-29 11:08:05</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>81</FlightId>
-		<Origin>11</Origin>
-		<Destination>10</Destination>
-		<Fee>$69.71</Fee>
-		<Plane>6</Plane>
+		<Origin>9</Origin>
+		<Destination>4</Destination>
+		<Fee>$5.27</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2014-10-29 17:16:53</DepartureTime>
+		<ArrivalTime>2013-11-19 00:21:08</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>82</FlightId>
-		<Origin>2</Origin>
-		<Destination>9</Destination>
-		<Fee>$84.60</Fee>
-		<Plane>7</Plane>
+		<Origin>7</Origin>
+		<Destination>3</Destination>
+		<Fee>$38.02</Fee>
+		<Plane>10</Plane>
+		<DepartureTime>2015-08-03 18:37:15</DepartureTime>
+		<ArrivalTime>2015-03-19 23:26:48</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>83</FlightId>
-		<Origin>5</Origin>
-		<Destination>4</Destination>
-		<Fee>$29.26</Fee>
-		<Plane>4</Plane>
+		<Origin>14</Origin>
+		<Destination>8</Destination>
+		<Fee>$41.55</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2014-11-03 06:51:37</DepartureTime>
+		<ArrivalTime>2014-01-19 15:30:00</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>84</FlightId>
-		<Origin>13</Origin>
-		<Destination>1</Destination>
-		<Fee>$18.92</Fee>
-		<Plane>3</Plane>
+		<Origin>12</Origin>
+		<Destination>5</Destination>
+		<Fee>$14.83</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2013-11-21 04:34:17</DepartureTime>
+		<ArrivalTime>2015-10-12 20:05:36</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>85</FlightId>
-		<Origin>14</Origin>
-		<Destination>5</Destination>
-		<Fee>$51.08</Fee>
-		<Plane>6</Plane>
+		<Origin>13</Origin>
+		<Destination>13</Destination>
+		<Fee>$94.68</Fee>
+		<Plane>8</Plane>
+		<DepartureTime>2015-05-27 17:57:17</DepartureTime>
+		<ArrivalTime>2013-11-30 07:35:24</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>86</FlightId>
-		<Origin>2</Origin>
-		<Destination>1</Destination>
-		<Fee>$78.71</Fee>
-		<Plane>2</Plane>
+		<Origin>5</Origin>
+		<Destination>4</Destination>
+		<Fee>$73.72</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-11-13 16:09:12</DepartureTime>
+		<ArrivalTime>2015-04-08 04:46:46</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>87</FlightId>
-		<Origin>9</Origin>
-		<Destination>7</Destination>
-		<Fee>$80.63</Fee>
-		<Plane>4</Plane>
+		<Origin>12</Origin>
+		<Destination>12</Destination>
+		<Fee>$93.11</Fee>
+		<Plane>6</Plane>
+		<DepartureTime>2014-09-28 05:23:23</DepartureTime>
+		<ArrivalTime>2015-01-16 19:36:30</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>88</FlightId>
 		<Origin>3</Origin>
-		<Destination>13</Destination>
-		<Fee>$1.53</Fee>
-		<Plane>4</Plane>
+		<Destination>4</Destination>
+		<Fee>$81.34</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-06-13 12:20:51</DepartureTime>
+		<ArrivalTime>2014-06-01 12:18:01</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>89</FlightId>
-		<Origin>2</Origin>
-		<Destination>3</Destination>
-		<Fee>$99.16</Fee>
-		<Plane>9</Plane>
+		<Origin>10</Origin>
+		<Destination>11</Destination>
+		<Fee>$89.38</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2015-07-02 19:04:49</DepartureTime>
+		<ArrivalTime>2014-03-22 00:34:23</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>90</FlightId>
-		<Origin>15</Origin>
-		<Destination>14</Destination>
-		<Fee>$66.47</Fee>
-		<Plane>3</Plane>
+		<Origin>9</Origin>
+		<Destination>11</Destination>
+		<Fee>$65.53</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2014-04-27 07:17:14</DepartureTime>
+		<ArrivalTime>2014-02-15 04:59:20</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>91</FlightId>
-		<Origin>11</Origin>
+		<Origin>6</Origin>
 		<Destination>15</Destination>
-		<Fee>$70.75</Fee>
+		<Fee>$19.48</Fee>
 		<Plane>9</Plane>
+		<DepartureTime>2015-04-16 22:25:30</DepartureTime>
+		<ArrivalTime>2014-05-24 11:36:03</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>92</FlightId>
-		<Origin>13</Origin>
-		<Destination>3</Destination>
-		<Fee>$45.54</Fee>
-		<Plane>4</Plane>
+		<Origin>7</Origin>
+		<Destination>5</Destination>
+		<Fee>$22.77</Fee>
+		<Plane>7</Plane>
+		<DepartureTime>2013-12-17 08:32:43</DepartureTime>
+		<ArrivalTime>2015-02-07 17:45:28</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>93</FlightId>
-		<Origin>14</Origin>
-		<Destination>12</Destination>
-		<Fee>$59.92</Fee>
-		<Plane>5</Plane>
+		<Origin>6</Origin>
+		<Destination>2</Destination>
+		<Fee>$55.44</Fee>
+		<Plane>3</Plane>
+		<DepartureTime>2013-12-02 23:55:13</DepartureTime>
+		<ArrivalTime>2014-09-16 06:30:38</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>94</FlightId>
 		<Origin>7</Origin>
-		<Destination>14</Destination>
-		<Fee>$37.34</Fee>
-		<Plane>1</Plane>
+		<Destination>1</Destination>
+		<Fee>$4.01</Fee>
+		<Plane>4</Plane>
+		<DepartureTime>2015-04-25 12:52:27</DepartureTime>
+		<ArrivalTime>2015-04-03 21:56:03</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>95</FlightId>
-		<Origin>7</Origin>
-		<Destination>3</Destination>
-		<Fee>$57.08</Fee>
-		<Plane>5</Plane>
+		<Origin>2</Origin>
+		<Destination>11</Destination>
+		<Fee>$0.36</Fee>
+		<Plane>7</Plane>
+		<DepartureTime>2015-02-08 23:21:01</DepartureTime>
+		<ArrivalTime>2015-05-28 05:29:21</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>96</FlightId>
-		<Origin>14</Origin>
-		<Destination>1</Destination>
-		<Fee>$66.40</Fee>
+		<Origin>11</Origin>
+		<Destination>3</Destination>
+		<Fee>$16.15</Fee>
 		<Plane>3</Plane>
+		<DepartureTime>2015-08-19 03:53:14</DepartureTime>
+		<ArrivalTime>2014-03-23 07:05:24</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>97</FlightId>
-		<Origin>1</Origin>
+		<Origin>10</Origin>
 		<Destination>14</Destination>
-		<Fee>$17.48</Fee>
-		<Plane>4</Plane>
+		<Fee>$38.78</Fee>
+		<Plane>5</Plane>
+		<DepartureTime>2014-10-17 12:19:17</DepartureTime>
+		<ArrivalTime>2015-10-15 21:23:41</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>98</FlightId>
-		<Origin>5</Origin>
-		<Destination>6</Destination>
-		<Fee>$59.30</Fee>
-		<Plane>3</Plane>
+		<Origin>2</Origin>
+		<Destination>14</Destination>
+		<Fee>$45.73</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2015-07-23 15:42:10</DepartureTime>
+		<ArrivalTime>2015-04-24 20:48:49</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>99</FlightId>
-		<Origin>7</Origin>
-		<Destination>5</Destination>
-		<Fee>$27.46</Fee>
-		<Plane>5</Plane>
+		<Origin>11</Origin>
+		<Destination>6</Destination>
+		<Fee>$92.21</Fee>
+		<Plane>7</Plane>
+		<DepartureTime>2015-01-25 00:08:48</DepartureTime>
+		<ArrivalTime>2015-03-12 16:22:33</ArrivalTime>
 	</Flight>
 	<Flight>
 		<FlightId>100</FlightId>
-		<Origin>5</Origin>
-		<Destination>9</Destination>
-		<Fee>$15.26</Fee>
-		<Plane>1</Plane>
+		<Origin>6</Origin>
+		<Destination>5</Destination>
+		<Fee>$55.73</Fee>
+		<Plane>2</Plane>
+		<DepartureTime>2014-10-16 15:17:51</DepartureTime>
+		<ArrivalTime>2015-03-08 13:40:25</ArrivalTime>
 	</Flight>
 </Flights>
