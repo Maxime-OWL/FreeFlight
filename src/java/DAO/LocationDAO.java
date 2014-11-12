@@ -9,13 +9,17 @@ package DAO;
  *
  * @author ducfpt
  */
+import Controller.Controller;
 import Entity.Flight;
 import Entity.Location;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
+import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
 public class LocationDAO {
@@ -66,5 +70,31 @@ public class LocationDAO {
         }
         System.out.println("Done!");
         return arr;
+    }
+
+    public boolean addNewLocation(String webAppPath, String location) {
+        try {
+            System.out.println("Start adding new location.."+location);
+            SAXReader reader = new SAXReader();
+            Document document = reader.read(webAppPath + "/xml/Locations.xml");
+            Element root = document.getRootElement();
+            int max = 0;
+            for (Iterator i = root.elementIterator("Location"); i.hasNext();) {
+                Element elt = (Element) i.next();
+                int cur = Integer.parseInt(elt.element("LocationId").getText());
+                if (cur > max ) {
+                    max = cur;
+                }
+            }
+            System.out.println(max);
+            //Node node = document.selectSingleNode("/Locations/Location[not(../Location/LocationId > LocationId)]");
+            //String id = node.valueOf("LocationId");
+            //System.out.println(id);
+            return true;
+        } catch (DocumentException ex) {
+            System.out.println("Add New Location Failed!");
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
     }
 }

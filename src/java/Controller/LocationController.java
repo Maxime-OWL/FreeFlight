@@ -18,6 +18,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 
 /**
  *
@@ -47,7 +52,11 @@ public class LocationController extends HttpServlet {
             request.setAttribute("locations", locations);
             rd = request.getRequestDispatcher("locations.jsp");
             rd.forward(request, response);        
-        } else {
+        } else if (service.equalsIgnoreCase("add_new_location")) {
+            String location = request.getParameter("location");
+            dao.addNewLocation(webAppPath, location);
+        }
+        else {
             response.sendRedirect("notification.jsp?errorCode=2");
         }
     }
