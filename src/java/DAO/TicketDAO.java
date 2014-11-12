@@ -9,6 +9,7 @@ package DAO;
  *
  * @author ducfpt
  */
+import Entity.Flight;
 import Entity.Plane;
 import Entity.Ticket;
 import java.util.ArrayList;
@@ -33,13 +34,21 @@ public class TicketDAO {
         try {
             document = reader.read(webAppPath + "/xml/Tickets.xml");
             Element root = document.getRootElement();
-            TicketDAO ticketDAO = new TicketDAO();
+            CustomerDAO customerDAO = new CustomerDAO();
+            FlightDAO flightDAO = new FlightDAO();
             for (Iterator i = root.elementIterator("Ticket"); i.hasNext();) {
                 Element elt = (Element) i.next();
                 Ticket ticket = new Ticket();
                 ticket.setTicketId(Integer.parseInt(elt.element("TicketId").getText()));
                 ticket.setFlightId(Integer.parseInt(elt.element("FlightId").getText()));
                 ticket.setCustomerId(Integer.parseInt(elt.element("CustomerId").getText()));
+                ticket.setCustomerName(customerDAO.getCustomerFromId(webAppPath, ticket.getCustomerId()).getName());
+                Flight flight = flightDAO.getFlightFromId(webAppPath, ticket.getFlightId());
+                ticket.setArrivalDate(flight.getArrivalDate());
+                ticket.setDepatureDate(flight.getDepartureDate());
+                ticket.setOrigin(flight.getOriginName());
+                ticket.setDestination(flight.getDestinationName());
+     
                 arr.add(ticket);
             }
         } catch (DocumentException ex) {

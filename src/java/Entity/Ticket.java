@@ -12,8 +12,13 @@ package Entity;
 public class Ticket {
     int TicketId;
     int FlightId;
-    int CustomerId;
-
+    int CustomerId; 
+    String CustomerName;
+    String Origin;
+    String Destination;
+    String DepatureDate;
+    String ArrivalDate;
+    
     public int getTicketId() {
         return TicketId;
     }
@@ -37,6 +42,48 @@ public class Ticket {
     public void setCustomerId(int CustomerId) {
         this.CustomerId = CustomerId;
     }
+
+    public String getCustomerName() {
+        return CustomerName;
+    }
+
+    public void setCustomerName(String CustomerName) {
+        this.CustomerName = CustomerName;
+    }
+
+    public String getOrigin() {
+        return Origin;
+    }
+
+    public void setOrigin(String Origin) {
+        this.Origin = Origin;
+    }
+
+    public String getDestination() {
+        return Destination;
+    }
+
+    public void setDestination(String Destination) {
+        this.Destination = Destination;
+    }
+
+    public String getDepatureDate() {
+        return DepatureDate;
+    }
+
+    public void setDepatureDate(String DepatureDate) {
+        this.DepatureDate = DepatureDate;
+    }
+
+    public String getArrivalDate() {
+        return ArrivalDate;
+    }
+
+    public void setArrivalDate(String ArrivalDate) {
+        this.ArrivalDate = ArrivalDate;
+    }
+    
+    
     
     
 }
