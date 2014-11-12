@@ -11,6 +11,7 @@ package DAO;
  */
 import Entity.Location;
 import Entity.Plane;
+import java.util.ArrayList;
 import java.util.Iterator;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -44,5 +45,28 @@ public class PlaneDAO {
             System.out.println("getLocationFromId failed!");
         }
         return null;
+    }
+
+    public ArrayList<Plane> fetchPlanes(String webAppPath) {
+        ArrayList<Plane> arr = new ArrayList<Plane>();
+        SAXReader reader = new SAXReader();
+        Document document;
+        try {
+            document = reader.read(webAppPath + "/xml/Planes.xml");
+            Element root = document.getRootElement();
+            PlaneDAO planeDAO = new PlaneDAO();
+            for (Iterator i = root.elementIterator("Plane"); i.hasNext();) {
+                Element elt = (Element) i.next();
+                Plane plane = new Plane();
+                plane.setPlaneId(Integer.parseInt(elt.element("PlaneId").getText()));
+                plane.setModel(elt.element("Model").getText());
+                plane.setCapacity(Integer.parseInt(elt.element("Capacity").getText()));
+                arr.add(plane);
+            }
+        } catch (DocumentException ex) {
+            System.out.println("fetchPlanes failed!");
+        }
+        System.out.println("Done!");
+        return arr;
     }
 }

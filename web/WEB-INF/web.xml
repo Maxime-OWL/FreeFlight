@@ -40,6 +40,10 @@
         <servlet-name>LocationController</servlet-name>
         <servlet-class>Controller.LocationController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PlaneController</servlet-name>
+        <servlet-class>Controller.PlaneController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserController</servlet-name>
         <url-pattern>/UserController</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>LocationController</servlet-name>
         <url-pattern>/LocationController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PlaneController</servlet-name>
+        <url-pattern>/PlaneController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

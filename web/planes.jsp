@@ -4,6 +4,7 @@
     Author     : MrDuc
 --%>
 
+<%@page import="Entity.Plane"%>
 <%@page import="Entity.Location"%>
 <%@page import="Entity.Flight"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,10 +20,10 @@
     </head>
     <body>
         <%
-            ArrayList<Location> locations = (ArrayList<Location>) request.getAttribute("locations");
+            ArrayList<Plane> planes = (ArrayList<Plane>) request.getAttribute("planes");
 
-            if (locations == null) {
-                response.sendRedirect("LocationController?service=list");
+            if (planes == null) {
+                response.sendRedirect("PlaneController?service=list");
             } else {
 
         %>
@@ -31,16 +32,20 @@
             <table id="logtable" border="1" width="100%">
                 <tr>
                     <th width="10">ID</th>
-                    <th>Location Name</th>
+                    <th>Model</th>
+                    <th>Capacity</th>
                     <th>Actions</th>
                 </tr>
-                <%                for (int i = 0; i < locations.size(); i++) {%>
+                <%                for (int i = 0; i < planes.size(); i++) {%>
                 <tr>
                     <td >
-                        <%=locations.get(i).getLocationId()%> 
+                        <%=planes.get(i).getPlaneId()%> 
                     </td>
                     <td>
-                        <%=locations.get(i).getName() %> 
+                        <%=planes.get(i).getModel() %> 
+                    </td>
+                    <td>
+                        <%=planes.get(i).getCapacity()%> 
                     </td>
                     <td>
                         <input type="button" value="Flights" class="blue"> <input type="button" value="Delete" class="blue">

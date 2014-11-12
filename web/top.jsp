@@ -174,8 +174,8 @@
                 <ul>
                     <li id="home_menu"> <a href="index.jsp" title="Flights"> Flights</a></li>
                     <%if (role != null ) { %>
-                        <li id="home_menu"> <a href="LocationController?service=list" title="Locations"> Locations</a></li>
-                        <li id="home_menu"> <a href="index.jsp" title="Planes"> Planes</a></li>
+                        <li id="home_menu"> <a href="locations.jsp" title="Locations"> Locations</a></li>
+                        <li id="home_menu"> <a href="planes.jsp" title="Planes"> Planes</a></li>
                         <% if (role.equals("1")) { %>
                             <li id="home_menu"> <a href="index.jsp" title="Tickets"> Tickets</a></li>
                         <% } %>

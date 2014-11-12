@@ -91,12 +91,10 @@
                             <label><a title="Forgot password" href="forgot_password.jsp">Forgot password?</a></label>						
                         </div>
                         <div class="login_button fl clr">
-                            <div class="login_button_lft"></div>
-                            <div class="login_button_midd">
+                            
                                 <input type="submit" title="SIGNIN" value="Signin" name="login" id="login" onClick="validateLogin()">
                                 <input type="hidden" name="service" id="service" value="login">
-                            </div>
-                            <div class="login_button_rgt"></div>
+                            
                         </div>
 
                     </form></div>

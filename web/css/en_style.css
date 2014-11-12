@@ -1516,7 +1516,7 @@ Sidebar
 
 
 #blog_details_page .news p{font:normal 12px arial;color:#656565!important;width:95%;float:left;}
-#blog_inner_page .save_mid input[type="submit"]{border:none;background:none;font;bold 12px arial; color:#fff;padding:3px;}
+/*#blog_inner_page .save_mid input[type="submit"]{border:none;background:none;font;bold 12px arial; color:#fff;padding:3px;}*/
 
 #banner{position:relative;z-index:99;}
 .banner_inner{position:relative;z-index:99;}
@@ -1643,7 +1643,7 @@ Sidebar
 #testimonials_details_page .news {float:left;width:700px;}
 #testimonials_details_page .test_username{font:normal 12px arial;color:#309ECF;float:left;clear:both;width:100%;}
 #testimonials_details_page .testmonials_right_content p{float:left;width:580px;}
-#testimonials_details_page .news{position:}
+/*#testimonials_details_page .news{position:}*/
 
 .thumb_video_list {background: url("../images/thumb_video.png") no-repeat;height: 34px;margin:30px 0 0 30px;position:absolute;width: 35px;z-index: 1;}
 #testimonials_details_page .videos{left:0px;}

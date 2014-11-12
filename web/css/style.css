@@ -684,7 +684,7 @@
 .res_left{ float:left; width:4px; height:27px; background:url("../images/res_left.png")  no-repeat;}
 .res_mid{ float:left; height:27px; background:url("../images/res_mid.png")  repeat-x;}
 .res_right{ float:left; width:4px; height:27px; background:url("../images/res_right.png")  no-repeat;}
-.res_mid  input[type="submit"],input[type="button"],input[type="reset"]{ width:110px; float:left;  border:none; background:none; font: bold 12px arial; padding: 0 6px 0px 6px; color:#fff; height:27px; text-transform: uppercase;}
+.res_mid  input[type="submit"],input[type="button"],input[type="reset"]{ float:left;  border:none; background:none; font: bold 12px arial; padding: 0 6px 0px 6px; color:#fff; height:27px; text-transform: uppercase;}
 .save_left{ float:left; width:3px; height:27px; background:url("../images/save_left.png")  no-repeat;}
 .save_mid{ float:left; height:27px; background:url("../images/save_mid.png")  repeat-x; padding:0 1px;}
 .save_right{ float:left; width:3px; height:27px; background:url("../images/save_right.png")  no-repeat;}
@@ -1524,7 +1524,7 @@ Sidebar
 
 
 #blog_details_page .news p{font:normal 12px arial;color:#656565!important;width:95%;float:left;}
-#blog_inner_page .save_mid input[type="submit"]{border:none;background:none;font;bold 12px arial; color:#fff;padding:3px;}
+/*#blog_inner_page .save_mid input[type="submit"]{border:none;background:none;font;bold 12px arial; color:#fff;padding:3px;}*/
 
 #banner{position:relative;z-index:99;}
 .banner_inner{position:relative;z-index:99;}
@@ -1651,7 +1651,7 @@ Sidebar
 #testimonials_details_page .news {float:left;width:700px;}
 #testimonials_details_page .test_username{font:normal 12px arial;color:#309ECF;float:left;clear:both;width:100%;}
 #testimonials_details_page .testmonials_right_content p{float:left;width:580px;}
-#testimonials_details_page .news{position:}
+/*#testimonials_details_page .news{position:}*/
 
 .thumb_video_list {background: url("../images/thumb_video.png") no-repeat;height: 34px;margin:30px 0 0 30px;position:absolute;width: 35px;z-index: 1;}
 #testimonials_details_page .videos{left:0px;}
