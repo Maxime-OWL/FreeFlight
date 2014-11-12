@@ -10,6 +10,7 @@ package DAO;
  * @author ducfpt
  */
 import Entity.Flight;
+import Entity.Location;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -49,6 +50,8 @@ public class FlightDAO {
         try {
             document = reader.read(webAppPath + "/xml/Flights.xml");
             Element root = document.getRootElement();
+            LocationDAO locationDAO = new LocationDAO();
+            PlaneDAO planeDAO = new PlaneDAO();
             for (Iterator i = root.elementIterator("Flight"); i.hasNext();) {
                 Element elt = (Element) i.next();
                 Flight flight = new Flight();
@@ -59,7 +62,9 @@ public class FlightDAO {
                 flight.setPlane(Integer.parseInt(elt.element("Plane").getText()));
                 flight.setDepartureDate(elt.element("DepartureTime").getText());
                 flight.setArrivalDate(elt.element("ArrivalTime").getText());
-                System.out.println(flight.getArrivalDate());
+                flight.setOriginName(locationDAO.getLocationFromId(webAppPath, flight.getOrigin()).getName());
+                flight.setDestinationName(locationDAO.getLocationFromId(webAppPath, flight.getDestination()).getName());
+                flight.setPlaneName(planeDAO.getPlaneFromId(webAppPath, flight.getPlane()).getModel());
                 arr.add(flight);
             }
         } catch (DocumentException ex) {

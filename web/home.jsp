@@ -35,16 +35,16 @@
                     <%=flights.get(i).getFlightId()%> 
                 </td>
                 <td>
-                    <%=flights.get(i).getOrigin()%> 
+                    <%=flights.get(i).getOriginName()%> 
                 </td>
                 <td>
-                    <%=flights.get(i).getDestination()%> 
+                    <%=flights.get(i).getDestinationName()%> 
                 </td>
                 <td>
                     <%=flights.get(i).getFee()%> 
                 </td>
                 <td>
-                    <%=flights.get(i).getPlane()%> 
+                    <%=flights.get(i).getPlaneName()%> 
                 </td>
                 <td>
                     <%=flights.get(i).getDepartureDate()%> 

@@ -5,6 +5,8 @@
  */
 package Entity;
 
+import DAO.LocationDAO;
+
 /**
  *
  * @author Duc
@@ -17,6 +19,11 @@ public class Flight {
     private int Plane;
     private String DepartureDate;
     private String ArrivalDate;
+    
+    private String OriginName;
+    private String DestinationName;
+    private String PlaneName;
+    
 
     public int getFlightId() {
         return FlightId;
@@ -73,6 +80,32 @@ public class Flight {
     public void setArrivalDate(String ArrivalDate) {
         this.ArrivalDate = ArrivalDate;
     }
+
+    public String getOriginName() {
+        return OriginName;
+    }
+
+    public void setOriginName(String OriginName) {
+        this.OriginName = OriginName;
+    }
+
+    public String getDestinationName() {
+        return DestinationName;
+    }
+
+    public void setDestinationName(String DestinationName) {
+        this.DestinationName = DestinationName;
+    }
+
+    public String getPlaneName() {
+        return PlaneName;
+    }
+
+    public void setPlaneName(String PlaneName) {
+        this.PlaneName = PlaneName;
+    }
+    
+    
 
     
     

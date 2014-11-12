@@ -32,6 +32,10 @@
         <servlet-name>FlightController</servlet-name>
         <servlet-class>Controller.FlightController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LocationDAO</servlet-name>
+        <servlet-class>DAO.LocationDAO</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserController</servlet-name>
         <url-pattern>/UserController</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>FlightController</servlet-name>
         <url-pattern>/FlightController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LocationDAO</servlet-name>
+        <url-pattern>/LocationDAO</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
