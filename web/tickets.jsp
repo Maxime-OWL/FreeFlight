@@ -33,8 +33,9 @@
             <table id="logtable" border="1" width="100%">
                 <tr>
                     <th width="10">ID</th>
-                    <th>Flight ID</th>
-                    <th>Customer ID</th>
+                    <th>Locations Info</th>
+                    <th>Datelines</th>
+                    <th>Customer Info</th>
                     <th>Actions</th>
                 </tr>
                 <%                for (int i = 0; i < tickets.size(); i++) {%>
@@ -43,10 +44,13 @@
                         <%=tickets.get(i).getTicketId()%> 
                     </td>
                     <td>
-                        <%=tickets.get(i).getFlightId() %> 
+                        From <%=tickets.get(i).getOrigin()%> to <%=tickets.get(i).getDestination()%> 
                     </td>
                     <td>
-                        <%=tickets.get(i).getCustomerId()%> 
+                        Depart at: <%=tickets.get(i).getDepatureDate()%>, Arrive at: <%=tickets.get(i).getArrivalDate()%> 
+                    </td>
+                    <td>
+                        <%=tickets.get(i).getCustomerName()%> 
                     </td>
                     <td>
                         <input type="button" value="Flights" class="blue"> <input type="button" value="Delete" class="blue">

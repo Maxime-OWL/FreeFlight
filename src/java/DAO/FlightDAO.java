@@ -40,9 +40,41 @@ public class FlightDAO {
     Message message = null;
 
     public FlightDAO() {
-        
+
     }
-    
+
+    public Flight getFlightFromId(String webAppPath, int Id) {
+        SAXReader reader = new SAXReader();
+        Document document;
+        try {
+            document = reader.read(webAppPath + "/xml/Flights.xml");
+            Element root = document.getRootElement();
+            LocationDAO locationDAO = new LocationDAO();
+            PlaneDAO planeDAO = new PlaneDAO();
+            for (Iterator i = root.elementIterator("Flight"); i.hasNext();) {
+                Element elt = (Element) i.next();
+                if (Id == Integer.parseInt(elt.element("FlightId").getText())) {
+                    Flight flight = new Flight();
+                    flight.setFlightId(Integer.parseInt(elt.element("FlightId").getText()));
+                    flight.setOrigin(Integer.parseInt(elt.element("Origin").getText()));
+                    flight.setDestination(Integer.parseInt(elt.element("Destination").getText()));
+                    flight.setFee(elt.element("Fee").getText());
+                    flight.setPlane(Integer.parseInt(elt.element("Plane").getText()));
+                    flight.setDepartureDate(elt.element("DepartureTime").getText());
+                    flight.setArrivalDate(elt.element("ArrivalTime").getText());
+                    flight.setOriginName(locationDAO.getLocationFromId(webAppPath, flight.getOrigin()).getName());
+                    flight.setDestinationName(locationDAO.getLocationFromId(webAppPath, flight.getDestination()).getName());
+                    flight.setPlaneName(planeDAO.getPlaneFromId(webAppPath, flight.getPlane()).getModel());
+                    return flight;
+                }
+            }
+        } catch (DocumentException ex) {
+            System.out.println("fetchFlights failed!");
+        }
+        System.out.println("Done!");
+        return null;
+    }
+
     public ArrayList<Flight> fetchFlights(String webAppPath) {
         ArrayList<Flight> arr = new ArrayList<Flight>();
         SAXReader reader = new SAXReader();
@@ -163,6 +195,7 @@ public class FlightDAO {
         DateTime dt = formatter.parseDateTime(dateString);
         return dt;
     }
+
     public DateTime getDateTimeFromString2(String dateString) {
         if (dateString.isEmpty()) {
             return DateTime.now();
