@@ -4,7 +4,6 @@
     Author     : Maxime
 --%>
 
-<%@page import="Entity.Category"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.joda.time.DateTime"%>
@@ -55,17 +54,7 @@
         <%
             String userName = (String) session.getAttribute("username");
             String role = (String) session.getAttribute("role");
-            String balance = (String) request.getAttribute("balance");
-            ArrayList<Category> categoryMenu = (ArrayList<Category>) request.getAttribute("categoryMenu");
-            String categoryIdString1 = request.getParameter("categoryId");
-            int categoryId1 = 0;
-            if (categoryIdString1 != null) {
-                categoryId1 = Integer.parseInt(categoryIdString1);
-            }
-            String keyword = request.getParameter("keyword");
-            if (keyword==null){
-                keyword = "";
-            }
+            
         %>
         <script type="text/javascript" src="JavaScript/ajax_top.js"></script>
         <script type="text/javascript" src="JavaScript/validate_auction_search.js"></script>
@@ -130,7 +119,7 @@
 
                                         <form action="AuctionController" id="user_search" name="user_search" method="get" onSubmit="return isSearchKeywordValid()">
                                             <input type="hidden" name="service" value="search_auction">
-                                            <input type="text" value="<%=keyword%>" name="keyword" id="keyword" class="fl" maxlength="300">
+                                            <input type="text" value="" name="keyword" id="keyword" class="fl" maxlength="300">
                                             </div>
                                             <div class="search_rgt">
                                                 <div class="search_button">
@@ -159,18 +148,7 @@
 
         <div id="header_menu">
             <div class="header_menu_inner">
-                <% if (categoryMenu != null) { %>
-                <ul id="ajax_load_top_categories">
-                    <li>
-                        <select style="width:auto; height: 31px;padding: 1px; margin: 0px;background: url(images/menu_bg.png) repeat-x;border:0px;font: bold 12px Arial, Helvetica, sans-serif;" ONCHANGE="location = this.options[this.selectedIndex].value;">
-                            <option value="AuctionController?service=index">All categories</option>
-                            <%     for (int i = 0; i < categoryMenu.size(); i++) {%>
-                            <option value="AuctionController?service=load_auctions_in_category&categoryId=<%=categoryMenu.get(i).getId()%>" <% if (categoryId1 == categoryMenu.get(i).getId()) { %>selected<% }%> ><%=categoryMenu.get(i).getName()%></option>
-                            <% } %>
-                        </select>
-                    </li>
-                </ul>
-                <% }%>
+                
                 <ul>
                     <li id="home_menu"> <a href="index.jsp" title="Flights"> Flights</a></li>
                     <%if (role != null ) { %>
@@ -188,11 +166,4 @@
         <br>
 
     </body>
-    <script>
-        ajax_load_top_balance('<%=role%>');
-        //ajax_load_top_categories();
-        window.setInterval(function() {
-            ajax_load_top_balance('<%=role%>');
-        }, 3000);
-    </script>
 </html>

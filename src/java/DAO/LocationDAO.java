@@ -104,6 +104,7 @@ public class LocationDAO {
                 xmlwriter.close();
             } catch (Exception ex) {
                 System.out.println("Failed!");
+                ex.printStackTrace();
             }
             //Node node = document.selectSingleNode("/Locations/Location[not(../Location/LocationId > LocationId)]");
             //String id = node.valueOf("LocationId");
