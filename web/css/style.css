@@ -1844,3 +1844,25 @@ Sidebar
     zoom: 1;
 }
 
+input[type="button"], input[type="submit"] {
+    color: #f4f4f4;
+    background: #4aaaa5;
+    font-weight: bold;
+    /*padding: 4px 9px 4px 9px;*/
+    margin:2px;
+    font-family: Arial,sans-serif;
+    border: solid 0 #e3edf4;
+    border-radius: 2px;
+    font-style: normal;
+    font-size: 14px;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+    color: #FFF;
+    background: #069;
+}
+
+input[type="button"]:active, input[type="submit"]:active {
+
+}
+

@@ -72,8 +72,8 @@ public class Controller extends HttpServlet {
             } catch (DocumentException ex) {
                 System.out.println("Add New Location Failed!");
                 Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-            } 
-        }else if (service.equalsIgnoreCase("user_manager")) {
+            }
+        } else if (service.equalsIgnoreCase("user_manager")) {
             rd = request.getRequestDispatcher(userManager);
             rd.forward(request, response);
             return;
@@ -204,12 +204,11 @@ public class Controller extends HttpServlet {
                         rd = request.getRequestDispatcher("index.jsp");
                         rd.forward(request, response);
                         found = true;
-                        break;
                     }
-                    if (!found) {
-                        rd = request.getRequestDispatcher("login.jsp?errorCode=1");
-                        rd.forward(request, response);
-                    }
+                }
+                if (!found) {
+                    rd = request.getRequestDispatcher("login.jsp?errorCode=1");
+                    rd.forward(request, response);
                 }
             } catch (DocumentException ex) {
                 System.out.println("Login Failed!");
@@ -318,8 +317,7 @@ public class Controller extends HttpServlet {
             processRequest(request, response);
 
         } catch (SQLException ex) {
-            Logger.getLogger(CategoryController.class
-                    .getName()).log(Level.SEVERE, null, ex);
+
         } catch (NoSuchAlgorithmException ex) {
             Logger.getLogger(Controller.class
                     .getName()).log(Level.SEVERE, null, ex);

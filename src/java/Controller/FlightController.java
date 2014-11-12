@@ -8,7 +8,6 @@ package Controller;
 import DAO.FlightDAO;
 import Entity.Flight;
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -40,23 +39,9 @@ public class FlightController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         FlightDAO dao = new FlightDAO();
         String service = request.getParameter("service");
-        final String auction_manager = "cp_auction_manager.jsp?current_page=auction_manager";
-        final String bidding_detail = "cp_bidding_detail.jsp";
-        final String add_auction = "cp_auction_add.jsp?current_page=auction_manager";
-        final String view_detail_auction = "cp_auction_view_detail.jsp?current_page=auction_manager";
-        final String edit_auction = "cp_edit_auction.jsp";
-        final String add_new_auction = "cp_auction_add.jsp";
-        final String view_auction = "auction_detail.jsp";
-        final String product_edit = "cp_customer_product_edit.jsp";
-        final String index = "index.jsp?errorCode=";
-        final String myproduct = "cp_customer_my_product.jsp?current_page=my_product";
-        final String add_product = "cp_customer_product_add.jsp?current_page=my_product";
-        final String product_manager = "cp_customer_my_product.jsp?current_page=my_product";
-        final String view_detail_product = "cp_customer_product_edit.jsp?current_page=my_product";
-        final String save_product = "cp_customer_product_edit_home.jsp?current_page=my_product";
-        ResultSet rs, rss, rst;
+     
         RequestDispatcher rd;
-        final String auction_detail_loading = "auction_detail_ajax.jsp";
+        
         String webAppPath = getServletContext().getRealPath("/");
         if (service.equalsIgnoreCase("index")) {
             ArrayList<Flight> flights =  dao.fetchFlights(webAppPath);

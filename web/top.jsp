@@ -94,7 +94,7 @@
                             <li class="active"><a href="register.jsp" title="Register">Register</a></li>                           
                                 <%} else {%>
 
-                            <li><a href="cp.jsp?current_page=dashboard" title="Customer"><%if (role.equals("0")) { %>User<% } else if (role.equals("1")) { %>Staff<% } else if (role.equals("2")) { %>Admin<% } %> Control Panel</a></li>
+                            <li><a href="#" title="Customer"><%if (role.equals("0")) { %>User<% } else if (role.equals("1")) { %>Staff<% } else if (role.equals("2")) { %>Admin<% } %> - <%=userName%></a></li>
                             <li class="active"><a href="UserController?service=logout" title="Signout" onclick="return confirm('Are you sure?')">Sign out</a></li>
 
                             <%}%>
@@ -172,7 +172,14 @@
                 </ul>
                 <% }%>
                 <ul>
-                    <li id="home_menu"> <a href="index.jsp" title="Home"> Home</a></li>
+                    <li id="home_menu"> <a href="index.jsp" title="Flights"> Flights</a></li>
+                    <%if (role != null ) { %>
+                        <li id="home_menu"> <a href="LocationController?service=list" title="Locations"> Locations</a></li>
+                        <li id="home_menu"> <a href="index.jsp" title="Planes"> Planes</a></li>
+                        <% if (role.equals("1")) { %>
+                            <li id="home_menu"> <a href="index.jsp" title="Tickets"> Tickets</a></li>
+                        <% } %>
+                    <% } %>
                 </ul>
             </div>
         </div>

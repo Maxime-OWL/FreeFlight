@@ -3,26 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Controller;
 
-import DAO.TransactionDAO;
-import Entity.Transaction;
+import DAO.LocationDAO;
+import Entity.Location;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Maxime
+ * @author MrDuc
  */
-public class TransactionController extends HttpServlet {
+public class LocationController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,24 +35,24 @@ public class TransactionController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException, ParseException {
         response.setContentType("text/html;charset=UTF-8");
+        LocationDAO dao = new LocationDAO();
         String service = request.getParameter("service");
-        TransactionDAO dao = new TransactionDAO();
-        final String myTransaction = "cp_customer_transaction.jsp?current_page=my_transactions";
         RequestDispatcher rd;
-        if (service.equalsIgnoreCase("mytransaction")) {
-            HttpSession session = request.getSession(true);
-            String userIdString = (String) session.getAttribute("userid");
-            int user_id = Integer.parseInt(userIdString);
-            ArrayList<Transaction> array = (ArrayList<Transaction>)dao.getTransactionFromUserId(user_id, 30);
-            request.setAttribute("transaction", array);
-            rd = request.getRequestDispatcher(myTransaction);
-            rd.forward(request, response);
+ 
+        String webAppPath = getServletContext().getRealPath("/");
+        if (service.equalsIgnoreCase("list")) {
+            ArrayList<Location> locations =  dao.fetchLocations(webAppPath);
+            request.setAttribute("locations", locations);
+            rd = request.getRequestDispatcher("locations.jsp");
+            rd.forward(request, response);        
+        } else {
+            response.sendRedirect("notification.jsp?errorCode=2");
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -63,7 +64,16 @@ public class TransactionController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(LocationController.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(LocationController.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -77,7 +87,16 @@ public class TransactionController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(LocationController.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(LocationController.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

@@ -20,18 +20,19 @@
     <body>
         <table id="logtable" border="1" width="100%">
             <tr>
-                <th>Flight ID</th>
+                <th width="10">ID</th>
                 <th>Origin</th>
                 <th>Destination</th>
                 <th>Fee</th>
                 <th>Plane</th>
                 <th>Departure Date</th>
                 <th>Arrival Date</th>
+                <th>Actions</th>
             </tr>
             <%
             for (int i = 0; i < flights.size(); i++) {%>
             <tr>
-                <td>
+                <td >
                     <%=flights.get(i).getFlightId()%> 
                 </td>
                 <td>
@@ -51,6 +52,16 @@
                 </td>
                 <td>
                     <%=flights.get(i).getArrivalDate()%> 
+                </td>
+                <td>
+                    <%
+                    if (role == null ) { %>
+                        You're required to login
+                        <% } else if (Integer.parseInt(role) == 0){ %>
+                    <input type="button" value="Book" class="blue">
+                    <% } else if (Integer.parseInt(role) == 1){ %>
+                    <input type="button" value="Delete" class="blue">
+                    <% } %>
                 </td>
             </tr>
             

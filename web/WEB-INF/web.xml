@@ -36,6 +36,10 @@
         <servlet-name>LocationDAO</servlet-name>
         <servlet-class>DAO.LocationDAO</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LocationController</servlet-name>
+        <servlet-class>Controller.LocationController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserController</servlet-name>
         <url-pattern>/UserController</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>LocationDAO</servlet-name>
         <url-pattern>/LocationDAO</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LocationController</servlet-name>
+        <url-pattern>/LocationController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
