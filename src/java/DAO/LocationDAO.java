@@ -12,15 +12,19 @@ package DAO;
 import Controller.Controller;
 import Entity.Flight;
 import Entity.Location;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
+import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
 import org.dom4j.Node;
+import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
+import org.dom4j.io.XMLWriter;
 
 public class LocationDAO {
 
@@ -74,7 +78,6 @@ public class LocationDAO {
 
     public boolean addNewLocation(String webAppPath, String location) {
         try {
-            System.out.println("Start adding new location.."+location);
             SAXReader reader = new SAXReader();
             Document document = reader.read(webAppPath + "/xml/Locations.xml");
             Element root = document.getRootElement();
@@ -82,11 +85,26 @@ public class LocationDAO {
             for (Iterator i = root.elementIterator("Location"); i.hasNext();) {
                 Element elt = (Element) i.next();
                 int cur = Integer.parseInt(elt.element("LocationId").getText());
-                if (cur > max ) {
+                if (cur > max) {
                     max = cur;
                 }
             }
-            System.out.println(max);
+
+            Integer newLocationId = max + 1;
+            Element newLocation = root.addElement("Location");
+            newLocation.addElement("LocationId").setText(newLocationId.toString());
+            newLocation.addElement("Name").setText(location);
+            root.appendAttributes(newLocation);
+            try {
+                FileOutputStream fos = new FileOutputStream(webAppPath + "/xml/Locations.xml");
+                OutputFormat format = OutputFormat.createPrettyPrint();
+                XMLWriter xmlwriter = new XMLWriter(fos, format);
+                xmlwriter.write(document);
+                System.out.println("dead");
+                xmlwriter.close();
+            } catch (Exception ex) {
+                System.out.println("Failed!");
+            }
             //Node node = document.selectSingleNode("/Locations/Location[not(../Location/LocationId > LocationId)]");
             //String id = node.valueOf("LocationId");
             //System.out.println(id);
