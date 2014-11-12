@@ -177,7 +177,7 @@
                         <li id="home_menu"> <a href="locations.jsp" title="Locations"> Locations</a></li>
                         <li id="home_menu"> <a href="planes.jsp" title="Planes"> Planes</a></li>
                         <% if (role.equals("1")) { %>
-                            <li id="home_menu"> <a href="index.jsp" title="Tickets"> Tickets</a></li>
+                            <li id="home_menu"> <a href="tickets.jsp" title="Tickets"> Tickets</a></li>
                         <% } %>
                     <% } %>
                 </ul>

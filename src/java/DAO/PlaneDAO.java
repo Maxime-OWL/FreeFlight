@@ -9,7 +9,6 @@ package DAO;
  *
  * @author ducfpt
  */
-import Entity.Location;
 import Entity.Plane;
 import java.util.ArrayList;
 import java.util.Iterator;
